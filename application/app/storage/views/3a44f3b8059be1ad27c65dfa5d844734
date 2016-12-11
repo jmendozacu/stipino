@@ -1,0 +1,63 @@
+
+    
+      <?php echo $__env->make('frontend.includes.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <!-- Start main-content -->
+        <div class="blog-header">
+            <div class="blog-header-title">
+                <p>Blog</p>
+            </div>
+        </div>
+        <div class="container blog-container-margin">
+            <!--blog content1 start-->
+            <?php foreach($blogpost as $entry): ?>
+            <div class="row blog-content-margin">
+                <div class="col-md-3 blog-row-clear-col-padding ">
+                    <div class="blog-content-image"><?php echo HTML::image(URL::to('/') . '/uploads/frontend/blog/thumbs/' . $entry->image, $entry->title); ?></div>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="blog-content-title"><?php echo $entry->title; ?></h1>
+                    <p class="blog-content-text"><?php echo $entry->intro; ?></p>
+                    <a href="<?php echo URL::route('blogPost', array('permalink' => $entry->permalink)); ?>" class="blog-more-button">Više...</a>
+                </div>
+                <div class="col-md-3">
+                    <div class="blog-content-divider"></div>
+                    <p class="blog-content-date"><i class="fa fa-clock-o blog-clock-icon-color" aria-hidden="true"></i> 12. rujna, <br><?php echo $entry->created_at; ?>
+
+                        <br>Ponedjeljak</p>
+                </div>
+            </div>
+            <?php endforeach; ?>
+
+          
+            <div class="blog-pages">
+ 
+                <?php echo $blogpost->links(); ?>
+
+ 
+            </div>
+        </div>
+        <div class="blog-tag-cloud">
+            <div class="container">
+                <div class="row blog-tag-cloud-row">
+                    <div class="col-md-3">
+                        <h1 class="blog-tag-cloud-title">TAG</h1>
+                        <h1 class="blog-tag-cloud-title2">CLOUD</h1></div>
+                    <div class="col-md-9 blog-tag-cloud-tags">
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                        <a href="#">#neki teh</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End main-content-->
+ <?php echo $__env->make('frontend.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ 

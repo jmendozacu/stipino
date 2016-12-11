@@ -1,0 +1,537 @@
+        @media screen and (max-width: 768px) {
+            .featured-product-lower-text p {
+                margin-right: 20px;
+            }
+            .padding-benefits-slike {
+                text-align: center;
+            }
+            .pull-about {
+                float: right;
+                margin-top: -100px;
+            }
+            #how-to {
+                min-height: 380px;
+            }
+            .radionice-first-activity {
+                width: 300px !important;
+                margin: 0 auto !important;
+            }
+            .cart-header-login-text {
+                font-size: 13px !important;
+                padding-left: 15px !important;
+            }
+            .cart-header-login-text-green {
+                font-size: 13px !important;
+            }
+            .radionice-form-control {
+                width: 350px;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            .cart-creditcard {
+                text-align: center;
+            }
+            .cart-form-delivery-info {
+                width: 440px;
+            }
+            .cart-content1-border {
+                width: 70% !important;
+                margin-left: 120px !important;
+            }
+            .cart-content2-border {
+                width: 70% !important;
+                margin-left: 120px !important;
+            }
+            .cart-truck {
+                text-align: center;
+                padding-right: 125px !important;
+            }
+            .cart-remove-proizvod-text-green {
+                left: 44% !important;
+            }
+            .cart-price-circle-column {
+                margin-left: 0px;
+                text-align: right;
+                float: right;
+                margin-top: -107px !important;
+            }
+            .cart-price-text-bold {
+                text-align: center !important;
+            }
+            .cart-price-text {
+                text-align: center !important;
+            }
+            .cart-price-text-big {
+                text-align: center !important;
+            }
+            .cart-order-button {
+                float: none !important;
+                margin: 0 auto !important;
+                display: block !important;
+            }
+            .container2-align {
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                padding: 0;
+            }
+            #cart-page-list {
+                width: 70%;
+                margin: 0 auto;
+            }
+            .cart-form-text-by-icon {
+                text-align: right;
+                padding-top: 10px;
+            }
+            .cart-form-delivery {
+                text-align: left;
+                margin-top: 3px;
+            }
+            .cart-form-delivery-info {
+                text-align: left;
+            }
+            .cart-price-circle-green {
+                margin-top: 135px !important;
+            }
+            .cart-item-container {
+                right: 52px !important;
+            }
+            .blog-content-divider {
+                right: 168px !important;
+            }
+            .blog-content-date {
+                margin-top: 27px !important;
+            }
+            .blog-content-title {
+                font-size: 30px !important;
+                margin-top: 10px !important;
+            }
+            .contact-form-padding {
+                padding-left: 15px !important;
+            }
+            .proizvodi-align-options > a {
+                line-height: 2.3 !important;
+            }
+            .proizvodi-green-bar {
+                height: 150px !important;
+            }
+            .no-margin-right {
+                margin-right: -80px !important;
+            }
+            .proizvod-facebook {
+                padding: 10px 33px !important;
+            }
+            .proizvod-googleplus {
+                padding: 10px 30px !important;
+            }
+            .video {
+                width: 100% !important;
+            }
+            #about-main-text {
+                margin-top: 120px !important;
+            }
+            .social-wrokshop-wrapper {
+                margin-top: 0px !important;
+                display: inline-block !important;
+            }
+            .social-margin-top30 {
+                margin-top: 30px !important;
+            }
+        }
+        
+        @media screen and (max-width: 425px) {
+            .carousel-indicators li {
+                width: 15px;
+                height: 15px;
+            }
+            .carousel-indicators .active {
+                width: 15px;
+                height: 15px;
+            }
+            .carousel-indicators {
+                padding-left: 0px;
+                margin-left: 0px;
+                text-align: center;
+            }
+            .carousel-title {
+                font-size: 26px !important;
+            }
+            .carousel-title-green {
+                font-size: 42px !important;
+            }
+            .carousel-content {
+                font-size: 18px !important;
+            }
+            .bg-black .kratki-opis {
+                display: none;
+            }
+            .featured-product-lower-text {
+                bottom: 150px;
+            }
+            .pull-about {
+                margin-top: -15px;
+            }
+            .dissapear-title {
+                display: none;
+            }
+            .cart-form-delivery-info {
+                width: 325px;
+            }
+            .cart-truck {
+                padding-right: 50px !important;
+            }
+            .cart-content1-border {
+                width: 90% !important;
+                margin-right: 0px !important;
+                margin-left: 0px !important;
+                margin: 0 auto !important;
+                margin-bottom: 15px !important;
+            }
+            .cart-content2-border {
+                width: 90% !important;
+                margin-right: 0px !important;
+                margin-left: 0px !important;
+                margin: 0 auto !important;
+            }
+            #cart-page-list {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .cart-content-title {
+                width: 280px !important;
+            }
+            .cart-remove-proizvod-text-green {
+                left: 35% !important;
+                margin-top: -11px !important;
+            }
+            .cart-price-circle-green {
+                width: 85px !important;
+                height: 85px !important;
+                margin-top: 135px !important;
+                margin-right: 0px !important;
+                margin-left: -35px !important;
+            }
+            .cart-iznos-price-green {
+                padding-top: 15px !important;
+            }
+            .cart-img-padding-left {
+                padding-left: 0px;
+            }
+            .display-inline-flex {
+                display: flex !important;
+            }
+            .margin-bottom40 {
+                margin-bottom: 40px !important;
+            }
+            .cart-remove-proizvod-text-green {
+                padding-top: 15px !important;
+            }
+            .cart-content1-border {
+                height: 200px !important;
+            }
+            .cart-content2-border {
+                height: 165px !important;
+            }
+            .cart-item-container {
+                width: 100% !important;
+                right: 0 !important;
+            }
+            .triangle-isosceles:after {
+                left: 35px !important;
+            }
+            .blog-content-divider {
+                right: 93px !important;
+                top: 33px !important;
+            }
+            .blog-content-date {
+                font-size: 11px !important;
+                margin-left: 3px !important;
+                margin-top: 50px !important;
+            }
+            .blog-content-title {
+                font-size: 20px !important;
+                margin-top: 5px !important;
+            }
+            .blog-content-image {
+                margin-top: 45px !important;
+                margin-left: 15px !important;
+            }
+            #blog-header {
+                height: 170px !important;
+                padding: 20px !important;
+            }
+            .blog-social-wrapper {
+                display: table-row !important;
+            }
+            #share-social {
+                height: 235px !important;
+            }
+            .blog-twitter-share {
+                display: inline-block !important;
+                position: relative !important;
+                top: 30px !important;
+            }
+            .blog-email-share {
+                display: inline-table !important;
+                position: relative !important;
+                top: 30px !important;
+            }
+            .proizvodi-align-options {
+                padding-top: 12px !important;
+            }
+            .register-title {
+                margin-left: 10px !important;
+            }
+            .marginleft-20 {
+                margin-left: -25px !important;
+            }
+            .product-tabs {
+                width: 100% !important;
+            }
+            .product-tabs > a {
+                margin-right: 0px !important;
+            }
+            video {
+                top: 70% !important;
+                width: 100% !important;
+            }
+            #about-header {
+                height: 390px !important;
+            }
+            .play {
+                transform: scale(.5, .5) !important;
+                margin-top: 104px !important;
+            }
+            #about-main-text {
+                margin-top: 0px;
+            }
+            .radionice-form-size {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 375px) {
+            .featured-product-lower-text {
+                bottom: 100px;
+            }
+            .radionice-form-control {
+                width: 300px;
+            }
+            .cart-form-delivery-info {
+                width: 290px;
+            }
+            .cart-content-title {
+                width: 265px !important;
+            }
+            .cart-price-circle-green {
+                margin-left: -45px !important;
+            }
+            .cart-price-background {
+                margin-left: -7px !important;
+            }
+            .cart-header-text-align {
+                margin-top: 18px !important;
+            }
+            .cart-item-options {
+                margin-left: -15px !important;
+            }
+            .cart-item-border div:last-child {
+                padding-left: 25px !important;
+            }
+            .btn-checkout {
+                padding: 10px 10px !important;
+            }
+            .blog-facebook-share {
+                padding: 12px 24px !important;
+            }
+            .button-addtocart-cart {
+                min-width: 155px !important;
+            }
+            .product-info h3 {
+                font-size: 26px !important;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            .radionice-first-activity {
+                width: 100% !important;
+            }
+            .featured-product-lower-text p {
+                font-size: 14px !important;
+            }
+            .najam-smjestaja-overlay p {
+                font-size: 16px !important;
+            }
+            .ponuda-blog-wrapper {
+                margin: 0px 25px;
+            }
+            #how-to h3 {
+                font-size: 28px;
+            }
+            .radionice-link {
+                font-size: 15px!important;
+            }
+            .radionice-form-control {
+                width: 245px !important;
+            }
+            .cart-form-delivery-info {
+                width: 220px !important;
+            }
+            .cart-content1-border {
+                height: 215px !important;
+            }
+            .cart-content2-border {
+                height: 180px !important;
+            }
+            .cart-price-circle-green {
+                margin-top: 155px !important;
+            }
+            .cart-remove-proizvod-text-green {
+                left: 4% !important;
+            }
+            .cart-price-background {
+                height: 310px !important;
+            }
+            #footer p {
+                font-size: 17px !important;
+            }
+            .cart-item-container > ul > li > div > div > a > h3 {
+                padding-left: 15px !important;
+                font-size: 18px !important;
+            }
+            .cart-item-options p {
+                font-size: 13px !important;
+            }
+            .cart-item-border div:last-child {
+                padding-left: 30px !important;
+            }
+            .cart-form-content1 {
+                padding-top: 8px;
+                text-align: left;
+            }
+            .cart-form-content1-info {
+                margin-left: -32px;
+            }
+            .cart-price-background > div {
+                padding: 0px;
+            }
+            .blog-content-divider {
+                right: 69px !important;
+            }
+            .blog-content-date {
+                margin-left: -7px !important;
+            }
+            .blog-facebook-share {
+                padding: 12px 10px !important;
+            }
+            .blog-googleplus-share {
+                padding: 12px 13px !important;
+            }
+            .blog-twitter-share {
+                padding: 12px 10px !important;
+            }
+            .blog-email-share {
+                padding: 12px 19px !important;
+            }
+            .proizvodi-green-bar-options {
+                padding: 23px !important;
+            }
+            .proizvodi-green-bar {
+                height: 190px !important;
+            }
+            .addtocart-change-width {
+                width: 100% !important;
+            }
+            .addtocart-change-width > button {
+                float: none !important;
+            }
+            .marginleft-20 {
+                float: right !important;
+                margin-right: -29px !important;
+            }
+            .button-addtocart-cart {
+                min-width: 180px !important;
+            }
+            .align-package-text {
+                text-align: center;
+            }
+            .product-info h3 {
+                font-size: 23px !important;
+            }
+        }
+        /*---------old-------------*/
+        
+        @media screen and (max-width: 480px) {
+            .row {
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            .featured-product-overlay-circle {
+                margin: 30px 250px;
+            }
+            .featured-product-lower-text p {
+                display: block;
+                margin: -65px auto;
+                padding: 0 28px;
+            }
+            .unhide-xs {
+                display: block;
+            }
+            .najam-smjestaja-overlay p {
+                margin-bottom: 0px;
+            }
+            .desni-rub {
+                border-right: none;
+            }
+            .center-xs {
+                text-align: center;
+            }
+            #benefits h6 {
+                margin: 10px 0;
+            }
+            .about img {
+                margin: 25px 0px;
+            }
+            .pull-about {
+                margin-top: -10px;
+                background-color: #fff;
+            }
+            .pull-newsletter {
+                margin-top: -30px;
+            }
+            .hide-xs {
+                display: none;
+            }
+            .bg-green-transparent {
+                font-size: 26px !important;
+            }
+            .bg-dark-transparent-5 {
+                display: block;
+                max-width: 400px !important;
+                font-size: 18px !important;
+                word-wrap: break-word;
+            }
+            /*---------------------blog single page-------------*/
+            .blog-title h1 {
+                font-family: 'Fredericka the Great', cursive;
+                font-size: 30px;
+                color: #fff;
+                font-weight: 100;
+                padding: 40px 20px;
+            }
+            .mobile-padding {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .social-wrapper {
+                display: inline-flex;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                margin-left: -10px;
+            }
+            .social-wrapper .fa {
+                display: block;
+                text-align: center;
+            }
+        }

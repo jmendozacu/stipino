@@ -1,0 +1,11 @@
+ 
+<?php echo $__env->make('frontend.includes.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+ 
+ <?php echo $page->content; ?>
+
+
+
+
+<?php echo $__env->make('frontend.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

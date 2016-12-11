@@ -1,0 +1,632 @@
+ 
+<div class="panel-heading bg-white">
+    <h4>Stipino - Dashboard</h4>
+</div>
+
+    <div style="margin-top:20px;">
+    </div>
+<div class="row">
+
+
+            <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <a href="<?php echo URL::route('OrdersIndex'); ?>" class="small-box-footer">
+                <div class="small-box bg-aqua">
+                  <div class="inner">
+                    <h3><?php echo $orderscount; ?></h3>
+                    <p>Narudžbe</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-users"></i>
+                  </div>
+                 <div style="text-align: center;" class="small-box-footer"><i class="fa fa-eye"></i> </div>
+                </div>
+                </a>
+              </div>
+
+               <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <a href="<?php echo URL::route('MediaIndex'); ?>" class="small-box-footer">
+                <div class="small-box bg-green">
+                  <div class="inner">
+                    <h3><?php echo $imagescount; ?></h3>
+                    <p>Slika</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-picture-o"></i>
+                  </div>
+                 <div style="text-align: center;" class="small-box-footer"><i class="fa fa-eye"></i> </div>
+                </div>
+                </a>
+              </div>
+ 
+
+               <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <a href="<?php echo URL::route('WidgetIndex'); ?>" class="small-box-footer">
+                <div class="small-box bg-orange">
+                  <div class="inner">
+                    <h3><?php echo $widgetcount; ?></h3>
+                    <p>Widgeta</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-cogs"></i>
+                  </div>
+                 <div style="text-align: center;" class="small-box-footer"><i class="fa fa-eye"></i> </div>
+                </div>
+                </a>
+              </div>
+              
+
+            <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <a href="<?php echo URL::route('BlogIndex'); ?>" class="small-box-footer">
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3><?php echo $blogcount; ?></h3>
+                    <p>Blog</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-rss"></i>
+                  </div>
+                 <div style="text-align: center;" class="small-box-footer"><i class="fa fa-eye"></i> </div>
+                </div>
+                </a>
+              </div>
+
+              <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <a href="<?php echo URL::route('WorkshopIndex'); ?>" class="small-box-footer">
+                <div class="small-box bg-purple">
+                  <div class="inner">
+                    <h3><?php echo $workshopcount; ?></h3>
+                    <p>Radionice</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-briefcase"></i>
+                  </div>
+                 <div style="text-align: center;" class="small-box-footer"><i class="fa fa-eye"></i> </div>
+                </div>
+                </a>
+              </div>
+
+              <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <a href="<?php echo URL::route('ProductsIndex'); ?>" class="small-box-footer">
+                <div class="small-box bg-bluish">
+                  <div class="inner">
+                    <h3><?php echo $productscount; ?></h3>
+                    <p>Proizvodi</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-shopping-cart"></i>
+                  </div>
+                 <div style="text-align: center;" class="small-box-footer"><i class="fa fa-eye"></i> </div>
+                </div>
+                </a>
+              </div>
+
+ 
+</div>
+
+ <div style="margin-top:20px;">
+    </div>
+
+<div class="row">
+    <div class="col-md-6">
+        <header class="panel-heading"> Pregled zadnje dodanih narudžbi </header>
+        <div class="panel-body table-responsive">
+            <table class="table table-hover" id="blogpost-list">
+                <thead>
+                    <tr>
+                        
+                        <th>Broj računa</th>
+                        <th>Klijent</th>
+                        <th>Datum</th>
+                        <th>Proizvod</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <?php foreach($orders as $order): ?>
+                <tr>
+
+                    <td> 
+                    <a href="<?php echo URL::route('OrdersEdit', array('id' => $order['entry']['0']->order_id)); ?>">
+                    <?php echo $order['entry']['0']->order_id; ?>
+
+                    </a>
+                    </td>
+                    <td> 
+                    <a href="<?php echo URL::route('ClientsEdit', array('id' => $order['0']['entry']->id)); ?>">
+                    <?php echo $order['0']['entry']->first_name; ?>  <?php echo $order['0']['entry']->last_name; ?>
+
+                    </a>
+                    </td>
+                    <td> <?php echo date('d.m.Y', strtotime($order['1']['entry']->order_date)); ?></td>
+                    <td>
+                    <?php foreach($order['entry'] as $second_array): ?>
+                  <div class="row"><div class="col-md-12">
+                   <a href="<?php echo URL::route('ProductsEdit', array('id' => $second_array->product_id)); ?>"><?php echo $second_array->title; ?></a> <span style="color:violet;"> <?php echo $second_array->producttitle; ?></span>
+                   </div></div>
+                    <?php endforeach; ?>
+                    </td>
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('OrdersEdit', array('id' => $order['entry']['0']->order_id)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
+                        </a>
+                        <button type="button" id="btn-delete-blog-id-<?php echo $order['entry']['0']->order_id; ?>" class="btn btn-danger btn-xs" data-target="#delete-blog-id-<?php echo $order['entry']['0']->order_id; ?>"><i class="fa fa-times"></i>
+                        </button>
+                    </td>
+                </tr>
+            
+            <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+     
+<?php if(count($entries) > 0): ?> 
+    <?php foreach($entries as $entry): ?>
+    <!-- Modal <?php echo $entry->id; ?>-->
+    <div class="modal fade" id="delete-blog-id-<?php echo $entry->id; ?>" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Pozor!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Želite li obrisati narudžbu: ?</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="<?php echo URL::route('OrdersDestroy', array('id' => $entry->id)); ?>">
+                        <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                    </a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
+<?php endif; ?> 
+    </div>
+    <div class="col-md-6">
+        <header class="panel-heading"> Pregled zadnje dodanih stranica </header>
+        <div class="panel-body table-responsive">
+            <table class="table table-hover" id="pages-list">
+                <thead>
+                    <tr>
+                        
+                        <th>Naslov</th>
+                        <th>Datum</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if(count($pages) > 0): ?> 
+                    <?php foreach($pages as $entry): ?>
+                    <tr>
+                        
+                        <td><?php echo $entry->title; ?></td>
+                        <td> <?php echo date('d. m. Y.', strtotime($entry->created_at)); ?> </td>
+                        <td class="col-md-1">
+                            <a href="<?php echo URL::route('PagesEdit', array('id' => $entry->id)); ?>">
+                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> </button>
+                            </a>
+                            <button type="button" id="btn-delete-page-id-<?php echo $entry->id; ?>" class="btn btn-danger btn-xs" data-target="#delete-page-id-<?php echo $entry->id; ?>"><i class="fa fa-times"></i> </button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?> 
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php if(count($pages) > 0): ?> 
+        <?php foreach($pages as $entry): ?>
+        <!-- Modal <?php echo $entry->id; ?>-->
+        <div class="modal fade" id="delete-page-id-<?php echo $entry->id; ?>" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pozor!</h4> </div>
+                    <div class="modal-body">
+                        <p>Želite li obrisati stranicu: <?php echo $entry->title; ?>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?php echo URL::route('PagesDestroy', array('id' => $entry->id)); ?>">
+                            <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                        </a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?> 
+        <?php endif; ?>
+    </div>
+</div>
+
+    <div style="margin-top:20px;">
+    </div>
+
+<!--sada dodano-->
+    <div class="row">
+    <div class="col-md-6">
+        <header class="panel-heading"> Pregled zadnje dodanih radionica </header>
+        <div class="panel-body table-responsive">
+            <table class="table table-hover" id="blogpost-list">
+                <thead>
+                    <tr>
+                        
+                        <th>Naslov</th>
+                        <th>Datum radionice</th>
+                        <th>Slika</th>
+                        <th>Kratki sadržaj</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if(count($workshops) > 0): ?> 
+                    <?php foreach($workshops as $entry): ?>
+                    <tr>
+                        
+                        <td><?php echo $entry->title; ?></td>
+                        <td> <?php echo date('d. m. Y.', strtotime($entry->created_at)); ?> </td>
+                        <td> <?php if($entry->image != '' || $entry->image != null): ?> <img src="<?php echo url('/'); ?>/uploads/frontend/workshops/thumbs/<?php echo $entry->image; ?>" class="img-responsive" style="width:50px;" /> <?php endif; ?> </td>
+                        <td><?php echo $entry->intro; ?></td>
+                        <td class="col-md-1">
+                            <a href="<?php echo URL::route('WorkshopEdit', array('id' => $entry->id)); ?>">
+                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> </button>
+                            </a>
+                            <button type="button" id="btn-delete-blog-id-<?php echo $entry->id; ?>" class="btn btn-danger btn-xs" data-target="#delete-blog-id-<?php echo $entry->id; ?>"><i class="fa fa-times"></i> </button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?> 
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php if(count($workshops) > 0): ?> 
+        <?php foreach($workshops as $entry): ?>
+        <!-- Modal <?php echo $entry->id; ?>-->
+        <div class="modal fade" id="delete-blog-id-<?php echo $entry->id; ?>" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pozor!</h4> </div>
+                    <div class="modal-body">
+                        <p>Želite li obrisati radionicu : <?php echo $entry->title; ?>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?php echo URL::route('WorkshopDestroy', array('id' => $entry->id)); ?>">
+                            <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                        </a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?> 
+        <?php endif; ?>
+    </div>
+
+    <!--proizvodi-->
+    <div class="col-md-6">
+        <header class="panel-heading"> Pregled zadnje dodanih proizvoda </header>
+        <div class="panel-body table-responsive">
+            <table class="table table-hover" id="pages-list">
+                <thead>
+                    <tr>
+                        
+                        <th>Proizvod</th>
+                        <th>Slika</th>
+                        <th>Pakiranje</th>
+                        <th>Opis</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if(count($products) > 0): ?> 
+                    <?php foreach($products as $entry): ?>
+                    <tr>
+                        
+                        <td><?php echo $entry->title; ?></td>
+                        <td> <?php if($entry->image != '' || $entry->image != null): ?> <img src="<?php echo url('/'); ?>/uploads/frontend/products/thumbs/<?php echo $entry->image; ?>" class="img-responsive" style="width:50px;" /> <?php endif; ?> </td>
+                        <td><?php echo $entry->joinproduct_weight; ?> <?php echo $entry->measure_unit; ?></td>
+                        <td><?php echo $entry->description; ?></td>
+                        <td class="col-md-1">
+                            <a href="<?php echo URL::route('ProductsEdit', array('id' => $entry->id)); ?>">
+                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> </button>
+                            </a>
+                            <button type="button" id="btn-delete-page-id-<?php echo $entry->id; ?>" class="btn btn-danger btn-xs" data-target="#delete-page-id-<?php echo $entry->id; ?>"><i class="fa fa-times"></i> </button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?> 
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php if(count($products) > 0): ?> 
+        <?php foreach($products as $entry): ?>
+        <!-- Modal <?php echo $entry->id; ?>-->
+        <div class="modal fade" id="delete-page-id-<?php echo $entry->id; ?>" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pozor!</h4> </div>
+                    <div class="modal-body">
+                        <p>Želite li obrisati ovaj proizvod: <?php echo $entry->title; ?>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?php echo URL::route('ProductsDestroy', array('id' => $entry->id)); ?>">
+                            <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                        </a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?> 
+        <?php endif; ?>
+    </div>
+</div>
+
+    <div style="margin-top:20px;">
+    </div>
+
+<div class="row">
+   <div class="col-md-6">
+        <header class="panel-heading"> Pregled zadnje dodanih blog postova </header>
+        <div class="panel-body table-responsive">
+            <table class="table table-hover" id="blogpost-list">
+                <thead>
+                    <tr>
+                        
+                        <th>Naslov</th>
+                        <th>Datum</th>
+                        <th>Istaknuta slika</th>
+                        <th>Kratki sadržaj</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if(count($blogposts) > 0): ?> 
+                    <?php foreach($blogposts as $entry): ?>
+                    <tr>
+                        
+                        <td><?php echo $entry->title; ?></td>
+                        <td> <?php echo date('d. m. Y.', strtotime($entry->created_at)); ?> </td>
+                        <td> <?php if($entry->image != '' || $entry->image != null): ?> <img src="<?php echo url('/'); ?>/uploads/frontend/blog/thumbs/<?php echo $entry->image; ?>" class="img-responsive" style="width:50px;" /> <?php endif; ?> </td>
+                        <td><?php echo $entry->intro; ?></td>
+                        <td class="col-md-1">
+                            <a href="<?php echo URL::route('BlogEdit', array('id' => $entry->id)); ?>">
+                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> </button>
+                            </a>
+                            <button type="button" id="btn-delete-blog-id-<?php echo $entry->id; ?>" class="btn btn-danger btn-xs" data-target="#delete-blog-id-<?php echo $entry->id; ?>"><i class="fa fa-times"></i> </button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?> 
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php if(count($blogposts) > 0): ?> 
+        <?php foreach($blogposts as $entry): ?>
+        <!-- Modal <?php echo $entry->id; ?>-->
+        <div class="modal fade" id="delete-blog-id-<?php echo $entry->id; ?>" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pozor!</h4> </div>
+                    <div class="modal-body">
+                        <p>Želite li obrisati blog post: <?php echo $entry->title; ?>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?php echo URL::route('BlogDestroy', array('id' => $entry->id)); ?>">
+                            <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                        </a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?> 
+        <?php endif; ?>
+    </div>
+   
+    <div class="col-md-6">
+        <header class="panel-heading"> Pregled zadnje dodanih widgeta </header>
+        <div class="panel-body table-responsive">
+            <table class="table table-hover" id="pages-list">
+                <thead>
+                    <tr>
+                     
+                        <th>Naslov</th>
+                        <th>Datum</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if(count($widgets) > 0): ?> 
+                    <?php foreach($widgets as $entry): ?>
+                    <tr>
+                      
+                        <td><?php echo $entry->title; ?></td>
+                        <td> <?php echo date('d. m. Y.', strtotime($entry->created_at)); ?> </td>
+                        <td class="col-md-1">
+                            <a href="<?php echo URL::route('WidgetEdit', array('id' => $entry->id)); ?>">
+                                <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> </button>
+                            </a>
+                            <button type="button" id="btn-delete-widget-id-<?php echo $entry->id; ?>" class="btn btn-danger btn-xs" data-target="#delete-widget-id-<?php echo $entry->id; ?>"><i class="fa fa-times"></i> </button>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?> 
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php if(count($widgets) > 0): ?> 
+        <?php foreach($widgets as $entry): ?>
+        <!-- Modal <?php echo $entry->id; ?>-->
+        <div class="modal fade" id="delete-widget-id-<?php echo $entry->id; ?>" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pozor!</h4> </div>
+                    <div class="modal-body">
+                        <p>Želite li obrisati widget: <?php echo $entry->title; ?>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?php echo URL::route('WidgetDestroy', array('id' => $entry->id)); ?>">
+                            <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                        </a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?> 
+        <?php endif; ?>
+    </div> 
+</div>
+
+
+<div class="row">
+  <div class="col-md-6">
+        <header class="panel-heading"> Posljednjih 8 unešenih slika </header>
+        <div class="panel-body">
+            <?php if(count($images) > 0): ?> 
+            <?php foreach($images as $entry): ?>
+            <div class="col-md-3 border-images">
+                
+                <?php if($entry->image != '' || $entry->image != null): ?> <a href="<?php echo URL::route('MediaEdit', array('id' => $entry->id)); ?>"><img src="<?php echo url('/'); ?>/uploads/backend/media/thumbs/<?php echo $entry->image; ?>" class="img-responsive" /></a> 
+                <?php endif; ?>
+                <button type="button" id="btn-delete-image-id-<?php echo $entry->id; ?>" class="btn-position btn btn-danger" data-target="#delete-image-id-<?php echo $entry->id; ?>"><i class="fa fa-times"></i> </button> 
+            </div>
+            <?php endforeach; ?> 
+            <?php endif; ?>
+        </div>
+            <?php if(count($images) > 0): ?> 
+            <?php foreach($images as $entry): ?>
+            <!-- Modal <?php echo $entry->id; ?>-->
+            <div class="modal fade" id="delete-image-id-<?php echo $entry->id; ?>" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Pozor!</h4> </div>
+                        <div class="modal-body">
+                            <p>Želite li obrisati sliku: <?php echo $entry->image; ?>?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="<?php echo URL::route('MediaDestroy', array('id' => $entry->id)); ?>">
+                                <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                            </a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?> 
+            <?php endif; ?>
+    </div>
+   
+  
+        </div>
+        <?php if(count($widgets) > 0): ?> 
+        <?php foreach($widgets as $entry): ?>
+        <!-- Modal <?php echo $entry->id; ?>-->
+        <div class="modal fade" id="delete-widget-id-<?php echo $entry->id; ?>" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pozor!</h4> </div>
+                    <div class="modal-body">
+                        <p>Želite li obrisati widget: <?php echo $entry->title; ?>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?php echo URL::route('WidgetDestroy', array('id' => $entry->id)); ?>">
+                            <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                        </a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?> 
+        <?php endif; ?>
+    </div> 
+</div>
+
+ 
+
+ 
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        <?php if(count($blogposts) > 0): ?>
+        <?php foreach($blogposts as $entry): ?>
+        $("#btn-delete-blog-id-<?php echo $entry->id; ?>").click(function() {
+            $('#delete-blog-id-<?php echo $entry->id; ?>').modal('show');
+        });
+        <?php endforeach; ?>
+        <?php endif; ?>
+         
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        <?php if(count($images) > 0): ?>
+        <?php foreach($images as $entry): ?>
+        $("#btn-delete-image-id-<?php echo $entry->id; ?>").click(function() {
+            $('#delete-image-id-<?php echo $entry->id; ?>').modal('show');
+        });
+        <?php endforeach; ?>
+        <?php endif; ?>
+        
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        <?php if(count($widgets) > 0): ?>
+        <?php foreach($widgets as $entry): ?>
+        $("#btn-delete-widget-id-<?php echo $entry->id; ?>").click(function() {
+            $('#delete-widget-id-<?php echo $entry->id; ?>').modal('show');
+        });
+        <?php endforeach; ?>
+        <?php endif; ?>
+        
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        <?php if(count($pages) > 0): ?>
+        <?php foreach($pages as $entry): ?>
+        $("#btn-delete-page-id-<?php echo $entry->id; ?>").click(function() {
+            $('#delete-page-id-<?php echo $entry->id; ?>').modal('show');
+        });
+        <?php endforeach; ?>
+        <?php endif; ?>
+        
+    });
+</script>

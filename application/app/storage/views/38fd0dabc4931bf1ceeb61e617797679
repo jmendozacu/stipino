@@ -1,0 +1,294 @@
+ 
+ <ul class="breadcrumb">
+    <li><a href="<?php echo URL::route('getDashboard'); ?>"><i class="fa fa-home"></i> Početna</a></li>
+    <li class="active"><a href="<?php echo URL::route('TrashIndex'); ?>">Pregled svih obrisan sadržaja</a></li>
+    
+    
+</ul>
+        
+<div class="panel-heading">
+    <h4>Pregled svih obrisan sadržaja (<?php echo $contentcount; ?>)</h4>
+</div>
+
+<div class="panel-body table-responsive">
+
+    <table class="table table-hover" id="entries-list">
+        <thead>
+            <tr>
+
+            
+              <?php if($trashed == 'blogposts' or $trashed == 'categories' or $trashed == 'pages' or $trashed == 'widgets' or $trashed == 'workshops' ): ?>
+                <th>Naslov</th>
+                <th>Slika</th>
+                <th>Obrisano</th>
+                <th>Obnovi</th>
+              <?php endif; ?>
+
+              <?php if($trashed == 'media'): ?>
+                <th>Slika</th>
+                <th>Obrisano</th>
+                <th>Obnovi</th>
+              <?php endif; ?>
+
+              <?php if($trashed == 'clients'): ?>
+                <th>Naziv klijenta</th>
+                <th>Email</th>
+                <th>Obrisano</th>
+                <th>Obnovi</th>
+              <?php endif; ?>
+
+               <?php if($trashed == 'products'): ?>
+                <th>Naziv</th>
+                <th>Cijena</th>
+                <th>Obrisano</th>
+                <th>Obnovi</th>
+              <?php endif; ?>
+
+              <?php if($trashed == 'productsweight'): ?>
+                <th>Naziv paketa</th>
+                <th>Količina i mjerna jedinica</th>
+                <th>Obrisano</th>
+                <th>Obnovi</th>
+              <?php endif; ?>
+
+              <?php if($trashed == 'productscategories'): ?>
+                <th>Naslov</th>
+                <th>Obrisano</th>
+                <th>Obnovi</th>
+              <?php endif; ?>
+
+              <?php if($trashed == 'orders'): ?>
+                <th>Naziv klijenta</th>
+                <th>Cijena narudžbe</th>
+                <th>Obrisano</th>
+                <th>Obnovi</th>
+              <?php endif; ?>
+          
+        </thead>
+         <!--blog, categories, pages, widgets, workshops-->
+            <?php if($trashed == 'blogposts' or $trashed == 'categories' or $trashed == 'pages' or $trashed == 'widgets' or $trashed == 'workshops' ): ?>
+                <tbody>
+             <?php if(count($entries) > 0): ?> 
+                <?php foreach($entries as $entry): ?>
+                <tr>
+                   
+                    <td><?php echo $entry->title; ?></td>
+                      <td>
+                        <?php if($entry->image != '' || $entry->image != null): ?>
+                        <?php if($trashed == 'blogposts' or $trashed == 'categories'): ?>
+                            <img src="<?php echo url('/'); ?>/uploads/frontend/blog/thumbs/<?php echo $entry->image; ?>" class="blog-post-image img-responsive" />
+                            <?php endif; ?>
+                             <?php if($trashed == 'pages'): ?>
+                            <img src="<?php echo url('/'); ?>/uploads/frontend/pages/thumbs/<?php echo $entry->image; ?>" class="blog-post-image img-responsive" />
+                            <?php endif; ?>
+                            <?php if($trashed == 'widgets'): ?>
+                            <img src="<?php echo url('/'); ?>/uploads/frontend/widgets/thumbs/<?php echo $entry->image; ?>" class="blog-post-image img-responsive" />
+                            <?php endif; ?>
+                            <?php if($trashed == 'workshops'): ?>
+                            <img src="<?php echo url('/'); ?>/uploads/frontend/workshops/thumbs/<?php echo $entry->image; ?>" class="blog-post-image img-responsive" />
+                            <?php endif; ?>
+                        <?php endif; ?> 
+                    </td>
+                    <td> <?php echo date('d. m. Y.', strtotime($entry->deleted_at)); ?> </td>
+                   
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-undo"></i></button>
+                        </a>
+                      
+                  
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+      <?php endif; ?>
+       <!--media-->
+       <?php if($trashed == 'media'): ?>
+                    <tbody>
+             <?php if(count($entries) > 0): ?> 
+                <?php foreach($entries as $entry): ?>
+                <tr>
+                      <td>
+                        <?php if($entry->image != '' || $entry->image != null): ?>
+                            <img src="<?php echo url('/'); ?>/uploads/backend/media/thumbs/<?php echo $entry->image; ?>" class="blog-post-image img-responsive" style="width:200px; height:100px;" />
+                        <?php endif; ?> 
+                    </td>
+                    <td> <?php echo date('d. m. Y.', strtotime($entry->deleted_at)); ?> </td>
+                   
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-undo"></i></button>
+                        </a>
+                      
+                  
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+    <?php endif; ?>
+<!--clients-->
+
+              <?php if($trashed == 'clients'): ?>
+                <tbody>
+             <?php if(count($entries) > 0): ?> 
+                <?php foreach($entries as $entry): ?>
+                <tr>
+                    <td><?php echo $entry->first_name; ?> <?php echo $entry->last_name; ?></td>
+                    <td><?php echo $entry->email; ?></td>
+                    <td> <?php echo date('d. m. Y.', strtotime($entry->deleted_at)); ?> </td>
+                   
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-undo"></i></button>
+                        </a>
+                      
+                  
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+     <?php endif; ?>
+<!--products-->
+  <?php if($trashed == 'products'): ?>
+                 <tbody>
+             <?php if(count($entries) > 0): ?> 
+                <?php foreach($entries as $entry): ?>
+                <tr>
+                    <td><?php echo $entry->title; ?></td>
+                    <td><?php echo $entry->price; ?></td>
+                    <td> <?php echo date('d. m. Y.', strtotime($entry->deleted_at)); ?> </td>
+                   
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-undo"></i></button>
+                        </a>
+                      
+                  
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+    <?php endif; ?>
+<!--productsweight-->
+  <?php if($trashed == 'productsweight'): ?>
+                <tbody>
+             <?php if(count($entries) > 0): ?> 
+                <?php foreach($entries as $entry): ?>
+                <tr>
+                    <td><?php echo $entry->title; ?></td>
+                    <td><?php echo $entry->product_weight; ?> <?php echo $entry->measure_unit; ?></td>
+                    <td> <?php echo date('d. m. Y.', strtotime($entry->deleted_at)); ?> </td>
+                   
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-undo"></i></button>
+                        </a>
+                      
+                  
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+              <?php endif; ?>
+
+<!--productscategories-->
+     <?php if($trashed == 'productscategories'): ?>
+                  <tbody>
+             <?php if(count($entries) > 0): ?> 
+                <?php foreach($entries as $entry): ?>
+                <tr>
+                    <td><?php echo $entry->categorytitle; ?></td>
+                    <td> <?php echo date('d. m. Y.', strtotime($entry->deleted_at)); ?> </td>
+                   
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-undo"></i></button>
+                        </a>
+                      
+                  
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+    <?php endif; ?>
+
+
+     <?php if($trashed == 'orders'): ?>
+                  <tbody>
+             <?php if(count($entries) > 0): ?> 
+                <?php foreach($entries as $entry): ?>
+                <tr>
+                    <td><?php echo $entry->first_name; ?> <?php echo $entry->last_name; ?></td>
+                    <td><?php echo $entry->orderprice; ?></td>
+                    <td> <?php echo date('d. m. Y.', strtotime($entry->deleted_at)); ?> </td>
+                   
+                    <td class="col-md-1">  
+ 
+                        <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                            <button class="btn btn-success btn-xs"><i class="fa fa-undo"></i></button>
+                        </a>
+                      
+                  
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+    <?php endif; ?>
+    </table>
+</div>
+
+<?php if(count($entries) > 0): ?> 
+    <?php foreach($entries as $entry): ?>
+    
+    <div class="modal fade" id="delete-blog-id-<?php echo $entry->id; ?>" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Pozor!</h4>
+                </div>
+                <div class="modal-body">
+                <?php if($trashed != 'media'): ?>
+                    <p>Želite li vratiti blog post: <?php echo $entry->title; ?>?</p>
+                <?php endif; ?>
+                </div>
+                <div class="modal-footer">
+                    <a href="<?php echo URL::route('TrashRestore', array('id' => $entry->id, 'trashed' => $trashed)); ?>">
+                        <button type="button" class="btn btn-default" data-ok="modal">U redu</button>
+                    </a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
+<?php endif; ?> 
+
+<div><?php echo $entries->links(); ?></div>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        <?php if(count($entries) > 0): ?> 
+            <?php foreach($entries as $entry): ?>
+                $("#btn-delete-blog-id-<?php echo $entry->id; ?>").click(function() { 
+                    $('#delete-blog-id-<?php echo $entry->id; ?>').modal('show');
+                });
+            <?php endforeach; ?>
+        <?php endif; ?> 
+       
+    });
+    </script>

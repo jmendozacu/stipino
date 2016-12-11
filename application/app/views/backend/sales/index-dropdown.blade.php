@@ -1,0 +1,31 @@
+ 
+
+  {{ Form::select('dropdown_filter', $dropdown_list, isset($entry->city) ? $entry->city : null, array('class' => 'form-control', 'style' => 'margin-top: 15px; max-width: 200px; margin-left: 15px;', 'id' => 'dropdown_filter', 'required')) }} 
+
+
+  <script>
+  	  $("#dropdown_filter").change(function(){
+        console.log('dropdown_filter');
+
+    var search_filter = $("#search_filter").val();
+    var dropdown_filter = $("#dropdown_filter").val();
+    $.ajax({
+    url: '/admin/orders/sales/filter/' + $(this).val(),
+    type: 'get',
+    data: {search_filter: search_filter},
+    success: function(data) {
+            console.log(search_filter);
+            console.log(dropdown_filter);
+            $('#all_sales_holder').html('');
+            $('#all_sales_holder').append(data);
+
+      
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+               
+  
+ 
+});
+  </script>
+    

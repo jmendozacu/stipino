@@ -1,0 +1,128 @@
+ 
+    
+      <?php echo $__env->make('frontend.includes.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <!-- Start main-content -->
+        <div class="contact-header-title">
+            <p>Kontakt</p>
+        </div>
+        <div class="container contact-form-position">
+            <div class="row  ">
+                <div class="col-md-8 contact-form-padding">
+                    <div>
+                        <input class="form-control" type="text" placeholder="Ime i prezime" id="example-text-input">
+                    </div>
+                    <div>
+                        <input class="form-control" type="email" placeholder="Email" id="example-email-input">
+                    </div>
+                    <div>
+                        <input class="form-control" type="tel" placeholder="Broj telefona" id="example-tel-input">
+                    </div>
+                    <div>
+                        <input class="form-control contact-form-comment-input" type="text" placeholder="Komentar" id="example-text-input">
+                    </div>
+                </div>
+                <div class="col-md-4 contact-form-padding contact-padding-top">
+                    <div class="row contact-icon-top-margin ">
+                        <div class="col-md-3 col-xs-3 contact-icons-size"><i style="padding-top:25px;" class="fa fa-map-signs" aria-hidden="true"></i></div>
+                        <div class="col-md-9 col-xs-9">
+                            <div>
+                                <p class="contact-icon-text-size">Adresa</p>
+                                <p class="contact-icon-top-margin contact-icon-text-discription">OPG Stjepan Dumancic Tomin Put 1, Ceminac 31325</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contact-icon-top-margin ">
+                        <div class="col-md-3 col-xs-3 contact-icons-size"><i style="padding-left:5px;" class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="col-md-9 col-xs-9">
+                            <div>
+                                <p class="contact-icon-text-size">Mobitel</p>
+                                <p class="contact-icon-top-margin contact-icon-text-discription">+385 99 817 3880</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contact-icon-top-margin ">
+                        <div class="col-md-3 col-xs-3 contact-icons-size"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class="col-md-9 col-xs-9">
+                            <div>
+                                <p class="contact-icon-text-size">E-mail</p>
+                                <p class="contact-icon-top-margin contact-icon-text-discription">info@stipino.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contact-icon-top-margin ">
+                        <div class="col-md-3 col-xs-3 contact-icons-size"><i class="fa fa-skype" aria-hidden="true"></i></div>
+                        <div class="col-md-9 col-xs-9">
+                            <div>
+                                <p class="contact-icon-text-size">Skype</p>
+                                <p class="contact-icon-top-margin contact-icon-text-discription">stjepan.dumancic</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contact-icon-top-margin ">
+                        <div class="col-md-3 col-xs-3 contact-icons-size"><i class="fa fa-facebook-official" aria-hidden="true"></i> </div>
+                        <div class="col-md-9 col-xs-9">
+                            <div>
+                                <p class="contact-icon-text-size">FB fan page</p>
+                                <p class="contact-icon-top-margin contact-icon-text-discription">www.facebook.com/stipinooo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contact-icon-top-margin ">
+                        <div class="col-md-3 col-xs-3 contact-icons-size"><i style="padding-left:5px;" class="fa fa-map-marker" aria-hidden="true"></i> </div>
+                        <div class="col-md-9 col-xs-9">
+                            <div>
+                                <p class="contact-icon-text-size">Lokacija(lon,lat)</p>
+                                <p class="contact-icon-top-margin contact-icon-text-discription">https://goo.gl/AcpqIL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-button-div-margin">
+                <button class="contact-form-send-button">Pošalji!</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="map" class="contact-gm-size"></div>
+        </div>
+ <?php echo $__env->make('frontend.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+         <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-2555128-15', 'auto');
+        ga('send', 'pageview');
+        </script>
+         
+        <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <script>
+    function initMap() {
+        var uluru = {
+            lat: 45.6699994,
+            lng: 18.6730698
+        };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1lTu-PZf-pmNGVuSvX4Dm7-svk6_MWOw&callback=initMap">
+    </script>
+ 

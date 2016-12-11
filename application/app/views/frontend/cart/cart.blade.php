@@ -1,0 +1,530 @@
+            @include('frontend.includes.navbar')
+
+
+        <!-- Start main-content -->
+        <div style="background-color: #545552; background-repeat: no-repeat; width: 100%; height: 125px;
+                    background-size: cover;">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 dissapear-title">
+                            <div class="cart-header-title cart-header-divider">
+                           <p>Košarica</p>
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="col-md-8 col-sm-8 cart-form-text-by-icon">
+                        <h2 class="cart-header-login-text cart-header-text-align">Imate li već korisnički račun napravljen kod nas? <a href="{{ URL::route('signin') }}" class="cart-header-login-text-green">Prijavite se</a></h2>
+                        <h2 class="cart-header-login-text">Nemate a zelite ga napraviti i iskoristiti sve pogodnosti?  <a href="{{ URL::route('getRegister') }}" class="cart-header-login-text-green">Registrirajte se!</a></h2>
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+     
+        <!--container2-->
+        
+         
+           
+            <div class="container cart-container-margin-top cart-container container2-align">
+            <div class="row">
+              {{ Form::open(array('route' => 'cartorder', 'role' => 'form', 'class' => 'form-horizontal', 'autocomplete' => 'off', 'files' => true)) }}
+              {{ Form::hidden('totalcartprice', '', array('id' => 'totalcartprice')) }}
+
+            <div class="col-md-6 col-sm-12 cart-column-remove-padding">
+                            <div class="cart-form-column-bg">
+                            <h1 class="cart-creditcard"> <i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Adresa na naplatu</h1>
+                           <div class="row cart-form-center ">
+                                <div class="col-md-12 ">
+
+                             {{ Form::text('first_name', isset($entry->first_name) ? $entry->first_name : null, ['class' => 'form-control radionice-form-control textinput-400','id' => 'first_name', 'placeholder' => 'Ime']) }}
+                                </div>
+                            </div>
+                             <div class="row cart-form-center ">
+                                <div class="col-md-12 ">
+                             {{ Form::text('last_name', isset($entry->last_name) ? $entry->last_name : null, ['class' => 'form-control radionice-form-control textinput-400','id' => 'last_name', 'placeholder' => 'Prezime']) }}
+                                </div>
+                            </div>
+                            <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                             {{ Form::text('email', isset($entry->email) ? $entry->email : null, ['class' => 'form-control radionice-form-control textinput-400', 'style' => 'margin-bottom: 35px' ,'id' => 'email', 'placeholder' => 'Email']) }}
+                                </div>
+                            </div>
+
+                            <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                             {{ Form::text('address', isset($entry->address) ? $entry->address : null, ['class' => 'form-control radionice-form-control textinput-400', 'id' => 'address', 'placeholder' => 'Ulica i broj']) }}
+                                </div>
+                            </div>
+                            <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                              {{ Form::select('area', $arealist, isset($entry->area) ? $entry->area : null, array('class' => 'form-control radionice-form-control textinput-400', 'id' => 'area', 'required')) }}
+                                </div>
+                            </div>
+                             <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                              {{ Form::select('city', $citieslist, isset($entry->city) ? $entry->city : null, array('class' => 'form-control radionice-form-control textinput-400', 'id' => 'city', 'required')) }} 
+                                </div>
+                            </div>
+                            <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                             {{ Form::text('additional_address', '', ['class' => 'form-control radionice-form-control textinput-400', 'id' => 'additional_address', 'placeholder' => 'Ulica i broj', 'style' => 'display:none;']) }}
+                                </div>
+                            </div>
+                   <div class="row">
+                   <div class="col-md-2 col-sm-1 col-xs-2">
+                   <a id="checkbox_address"><i id="checkboxicon1" class="fa fa-circle-o cart-form-delivery-icon" aria-hidden="true"></i></a></div>
+                   <div class="col-md-10 col-sm-11 col-xs-10 cart-form-text-by-icon"> <h4 class="cart-form-delivery">Dostava na drugu adresu</h4>
+                   <p class="cart-form-delivery-info">Želite li dostavu na drugu adresu, ili poslati kao poklon, odaberite ovu opciju i unesite adresu za dostavu.</p></div>
+                   </div>
+                  </div>
+                  <div>
+                      <h1 class="cart-truck"> <i class="fa fa-truck" aria-hidden="true"></i>&nbsp;&nbsp;Dostava</h1>
+                     
+                 <div class="row cart-content1-border" id="additional_shipping">
+                   <div class="col-md-2 col-sm-2 col-xs-2"><a id="checkbox_shipping"><i id="checkboxicon2" class="fa fa-check-circle-o cart-form-content1-icon" aria-hidden="true"></i></a></div>
+                   <div class="col-md-10 col-sm-10 col-xs-10 cart-form-text-by-icon"> <h4 class="cart-form-content1">Stipina dostava</h4>
+                   <p class="cart-form-content1-info">Naše proizvode dostavljamo <span class="cart-form-content1-info-green"> u sve veće hrvatske gradove</span>.
+                   Slijedeća dostava u <span class="text-bold">Zagreb, tržnica Kvatric.</span></p>
+                  <h3 class="cart-content1-date-text"><span class="cart-content1-date-number">28.</span>studenog <span class="cart-content1-date-number">2016.</span></h3></div>
+
+                   </div>
+
+                     <div class="row cart-content2-border" id="additional_express">
+                   <div class="col-md-2 col-sm-2 col-xs-2"><a id="checkbox_express"><i id="checkboxicon3" class="fa fa-circle-o cart-form-content2-icon" aria-hidden="true"></i></a></div>
+                   <div class="col-md-10 col-sm-10 col-xs-10 cart-form-text-by-icon"> <h4 class="cart-form-content1">Kurirska služba</h4>
+                   <p class="cart-form-content1-info">Naše pakete dostavlja <span class="cart-form-content1-info-green"> XYZ Express</span>, po cijeni od 8kn po kilogramu, na podrucju cijele Hrvatske.
+                  </p>
+                  </div>
+
+                   </div>
+                
+                  </div>
+                   
+               </div>
+ 
+               <div class="col-md-6 col-sm-12 col-xs-12 cart-row-margin-top cart-column-remove-padding" style="padding-left: 15px;">
+               <ul id="cart-page-list">
+              
+                            </ul>
+                            <div class="row cart-price-background">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                              <h3 class="cart-price-text-bold">Iznos</h3>
+                              <h3 class="cart-price-text">Dostava</h3>
+                              <h3 class="cart-price-text">Porez (PDV)</h3>
+                              <h3 class="cart-price-text-big">Ukupno</h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                              <h3 class="cart-price-text-bold"><span id="price_before_pdv"></span> kn</h3>
+                              <h3 class="cart-price-text">40.00 kn</h3>
+                              <h3 class="cart-price-text"><span id="price_pdv"></span> kn</h3>
+                              <h3 class="cart-price-text-big"><span id="price_after_pdv"></span> kn</h3>
+                            </div> 
+                             {{ Form::button('Naruči', array('type' => 'submit', 'class' => 'btn button-about cart-order-button')) }}
+                            {{ Form::close() }}
+                            </div>
+                     </div>
+              </div>
+          </div>
+  
+ 
+<div class="alert alert-success item-added-success displaynone" id="item-added">
+  <strong>Uspješno!</strong> Dodan novi proizvod u košaricu.
+</div>
+
+
+<div class="alert alert-warning item-added-success displaynone" id="item-destroyed">
+  <strong>Izbrisano!</strong> Obrisali ste proizvod iz košarice.
+</div>
+
+
+<script>
+
+var pressed = 0;
+
+$("#checkbox_address").click(function() {
+
+  var address_form = document.getElementById('additional_address');
+  if(pressed == 0){
+  $( "#checkboxicon1" ).removeClass( "fa fa-circle-o cart-form-delivery-icon" ).addClass( "fa fa-check-circle-o cart-form-delivery-icon" );
+  address_form.style['display'] = 'block';
+  pressed = 1;
+  }else{
+  $( "#checkboxicon1" ).removeClass( "fa fa-check-circle-o cart-form-delivery-icon" ).addClass( "fa fa-circle-o cart-form-delivery-icon" );
+  address_form.style['display'] = 'none';
+  
+  pressed = 0;
+  }
+ 
+});
+</script>
+
+<script>
+
+var pressed2 = 0;
+
+$("#checkbox_shipping").click(function() {
+
+  var address_form = document.getElementById('additional_shipping');
+  if(pressed2 == 0){
+  $( "#checkboxicon2" ).removeClass( "fa fa-check-circle-o cart-form-content1-icon" ).addClass( "fa fa-circle-o cart-form-content1-icon color-black-checkbox" );
+  address_form.style['border-color'] = '#222';
+  pressed2 = 1;
+  }else{
+  $( "#checkboxicon2" ).removeClass( "fa fa-circle-o cart-form-content1-icon color-black-checkbox" ).addClass( "fa fa-check-circle-o cart-form-content1-icon" );
+  address_form.style['border-color'] = '#899f00';
+  pressed2 = 0;
+  }
+ 
+});
+</script>
+
+
+<script>
+
+var pressed3 = 0;
+
+$("#checkbox_express").click(function() {
+  console.log('pressed')
+  var address_form = document.getElementById('additional_express');
+  if(pressed3 == 0){
+  $( "#checkboxicon3" ).removeClass( "fa fa-circle-o cart-form-content2-icon" ).addClass( "fa fa-check-circle-o cart-form-content2-icon color-green-checkbox" );
+  address_form.style['border-color'] = '#899f00';
+  pressed3 = 1;
+  }else{
+  $( "#checkboxicon3" ).removeClass( "fa fa-check-circle-o cart-form-content2-icon color-green-checkbox" ).addClass( "fa fa-circle-o cart-form-content2-icon" );
+  address_form.style['border-color'] = '#222';
+  pressed3 = 0;
+  }
+ 
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+                $(document).ready(function(){
+                $.ajax({
+                url: '/ajax/getCartItems/',
+                type: 'get',
+                data: {},
+                success: function(data) {
+                if (data.success == true) {
+                $("#cartCount").text(data.total_count);
+                console.log('this was good');       
+                } else {
+                alert('Cannot find info');
+                }
+
+                },
+             error: function(jqXHR, textStatus, errorThrown) {}
+             });
+                });
+
+</script>
+
+
+
+<script type="text/javascript">
+
+
+$("#cart").click(function() {
+    
+    var NAME = document.getElementById("cart_list");
+    var currentClass = NAME.className;
+  
+    if (currentClass == "container displayblock") { 
+        NAME.className = "container displaynone";  
+    } else {
+        NAME.className = "container displayblock";
+
+  $.ajax({
+    url: '/ajax/getCartItemList/',
+    type: 'get',
+    data: {},
+    success: function(data) {
+      if (data.success == true) {
+        var itemCount = Object.keys(data.cartitems).length;
+        var totalPrice = 0;
+        var totalItemCount = document.getElementById("cartCount").innerHTML;
+
+      
+
+        $("#cart-item-list").html("");
+        $("#total-price").html("");
+        for(i=0; i < itemCount; i++ ){
+    
+            totalPrice = data.cartitems[i].subtotal + totalPrice;
+          
+
+         
+          $('#cart-item-list').append('<li><div class="row cart-item-border"><div class="col-md-3 col-sm-3 col-xs-3" style="padding-left: 0;"><div class="cart-list-img"></div></div><div class="col-md-9 col-sm-9 col-xs-9"><a href="/proizvod/'+data.cartitems[i]['options'].permalink+'"><h3>'+data.cartitems[i].name+'</h3></a><div class="cart-item-options"><p>Količina: '+data.cartitems[i].qty+'</p><p style="margin-bottom: -20px;">Cijena: '+data.cartitems[i].price+'kn</p></div></div></div>'+'<input type="submit" class="done delete cart-delete-item" value="Obriši" data-id="'+data.cartitems[i].id+'" data-totalvalue="'+data.cartitems[i].subtotal+'" data-quantity="'+data.cartitems[i].qty+'"'+' data-rowid="'+data.cartitems[i].rowid+'">'+'</li>');
+
+
+        }
+        
+        $('#total-price').append('<b>Ukupno:</b> '+totalPrice+'kn');
+        console.log('right after:'+totalItemCount);
+       $('#cart-item-list').on('click', '.delete',function(){
+        var product_id = $(this).data('id');
+        var product_value = $(this).data('totalvalue');
+        var product_quantity = $(this).data('quantity');
+        var product_rowid = $(this).data('rowid');
+       
+        console.log('right before:'+totalItemCount);
+        totalItemCount = (totalItemCount-product_quantity);
+        totalPrice = (totalPrice-product_value);
+        console.log('after:'+totalItemCount);
+
+       $(this).parent().remove();
+       $("#total-price").html("");
+       $('#total-price').append('<b>Ukupno:</b> '+totalPrice+'kn')
+       $("#cartCount").text(totalItemCount);
+        $.ajax({
+        url: '/ajax/removeFromCart/' + product_rowid,
+        type: 'get',
+        data: {},
+    success: function(data) {
+      if (data.success == true) {
+        $('#item-destroyed').show();   
+        $('#item-destroyed').delay(1500).fadeOut();     
+      } else {
+        alert('Cannot find info');
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+
+
+       });
+
+        
+       
+      } else {
+        alert('Cannot find info');
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+
+    }
+
+    });
+
+
+</script>
+
+<script >
+    var totalItems = 2;
+
+    $("#button_up").click(function(){
+            if(totalItems > 1){
+        totalItems++;
+        $("#total_items").val(totalItems);
+        }
+    });
+
+    $("#button_down").click(function(){
+        if(totalItems > 1){
+        totalItems--;
+        $("#total_items").val(totalItems);
+         }
+    });
+   
+</script>
+
+
+
+<script>
+  $.ajax({
+    url: '/ajax/getCartPageItemList/',
+    type: 'get',
+    data: {},
+    success: function(data) {
+      if (data.success == true) {
+        var itemCount = Object.keys(data.cartitems).length;
+        var totalPrice = 0;
+        var totalItemCount = document.getElementById("cartCount").innerHTML;
+
+      
+
+        $("#cart-item-list").html("");
+        $("#total-price").html("");
+        for(i=0; i < itemCount; i++ ){
+    
+            totalPrice = data.cartitems[i].subtotal + totalPrice;
+          
+
+  
+
+         $('#cart-page-list').append('<li class="margin-bottom40"><div class="row"><div class="col-md-5 col-sm-5 col-xs-12 cart-img-padding-left"><div style="background-image:url(uploads/frontend/products/'+data.cartitems[i]['options'].image+'); width: 100%; height:150px; background-size: cover;background-repeat: no-repeat;" ></div></div><div class="col-md-6 col-sm-6 col-xs-10" style="padding-left:0px"><a href="/proizvod/'+data.cartitems[i]['options'].permalink+'"><h1 class="cart-content-title">'+data.cartitems[i].name+'</h1></a><span class="cart-content-amount-green">Pakiranje</span> <span class="cart-content-amount-number">'+data.cartitems[i]['options'].packaging+'</span><div class="display-inline-flex" style="margin-top:7px;"><div class="button-numeric down" data-btndown="'+i+'" data-packaging="'+data.cartitems[i]['options'].packaging+'" data-price="'+data.cartitems[i].price+'" data-id="'+data.cartitems[i].id+'" data-rowid="'+data.cartitems[i].rowid+'">-</div><input type="text" data-quantity="'+data.cartitems[i].qty+'" id="total_items'+i+'" value="'+data.cartitems[i].qty+'" name="fname" class="form-control numeric-form-control" style="width: 100px; text-align:center; font-size:18px;"><br><div class="button-numeric up" data-btnup="'+i+'" data-rowid="'+data.cartitems[i].rowid+'" data-price="'+data.cartitems[i].price+'" data-packaging="'+data.cartitems[i]['options'].packaging+'" data-id="'+data.cartitems[i].id+'">+</div></div></div><div class="col-md-1 col-xs-2 cart-form-text-by-icon cart-price-circle-column "><div class="cart-price-circle-green"><p class="cart-iznos-price-green">iznos</p><p class="cart-current-price-green">'+data.cartitems[i].price+' kn</p></div></div></div><a class="cart-remove-proizvod-text-green done delete" type="submit data-id="'+data.cartitems[i].id+'" data-totalvalue="'+data.cartitems[i].subtotal+'" data-quantity="'+data.cartitems[i].qty+'"'+' data-rowid="'+data.cartitems[i].rowid+'"><p>Ukloni proizvod</p></a></li>');
+
+        }
+
+//EDIT cart item
+      $('#cart-page-list').on('click', '.up', function(){
+      var btn_number = $(this).data('btnup');
+      var product_price = $(this).data('price');
+      var product_id = $(this).data('id');
+      var product_packaging = $(this).data('packaging');
+      var product_rowid = $(this).data('rowid');
+      
+      var product_quantity = document.getElementById("total_items"+btn_number).value;
+      var totalItemCount = document.getElementById("cartCount").innerHTML;
+      
+      var totalPrice = document.getElementById("price_before_pdv").innerHTML;
+      totalPrice = (totalPrice-(product_price*product_quantity));
+
+      totalItemCount = (totalItemCount-product_quantity);
+      product_quantity++;
+      
+      $("#cartCount").text((totalItemCount+product_quantity));
+      $("#total_items"+btn_number).val(product_quantity);
+      totalPrice = (totalPrice+(product_price*product_quantity));
+      $('#price_before_pdv').text(totalPrice);
+      var pdv = document.getElementById("price_before_pdv").innerHTML;
+      pdv = totalPrice*0.25;
+      $('#price_pdv').text(pdv);
+      var totalprice_pdv = totalPrice + pdv + 40; 
+      $('#price_after_pdv').text(totalprice_pdv);
+      $('#totalcartprice').val(totalprice_pdv);
+
+      addItemToCart(product_id, btn_number, product_packaging, product_rowid)
+      $(this).parent().attr('contenteditable','true');
+      });
+
+      $('#cart-page-list').on('click', '.down', function(){
+      var btn_number = $(this).data('btndown');
+      var product_price = $(this).data('price');
+      var product_id = $(this).data('id');
+      var product_packaging = $(this).data('packaging');
+      var product_rowid = $(this).data('rowid');
+
+      var product_quantity = document.getElementById("total_items"+btn_number).value;
+      var totalItemCount = document.getElementById("cartCount").innerHTML;
+
+      var totalPrice = document.getElementById("price_before_pdv").innerHTML;
+      totalPrice = (totalPrice-(product_price*product_quantity));
+
+      totalItemCount = (totalItemCount-product_quantity);
+      product_quantity--;
+  
+     $("#cartCount").text((totalItemCount+product_quantity));
+      $("#total_items"+btn_number).val(product_quantity);
+      totalPrice = (totalPrice+(product_price*product_quantity));
+      $('#price_before_pdv').text(totalPrice);
+      var pdv = document.getElementById("price_before_pdv").innerHTML;
+      pdv = totalPrice*0.25;
+      $('#price_pdv').text(pdv);
+      var totalprice_pdv = totalPrice + pdv +40; 
+      $('#price_after_pdv').text(totalprice_pdv);
+      $('#totalcartprice').val(totalprice_pdv);
+
+      addItemToCart(product_id, btn_number, product_packaging, product_rowid)
+      $(this).parent().attr('contenteditable','true');
+      });
+
+     
+
+//delete cart item
+        $('#price_before_pdv').text(totalPrice);
+        var pdv = totalPrice*0.25;
+        $('#price_pdv').text(pdv);
+        var totalprice_pdv = totalPrice + pdv +40; 
+        $('#price_after_pdv').text(totalprice_pdv);
+        $('#totalcartprice').val(totalprice_pdv);
+       $('#cart-page-list').on('click', '.delete',function(){
+        var product_id = $(this).data('id');
+        var product_value = $(this).data('totalvalue');
+        var product_quantity = $(this).data('quantity');
+        var product_rowid = $(this).data('rowid');
+
+     
+        var totalItemCount = document.getElementById("cartCount").innerHTML;
+        totalItemCount = (totalItemCount-product_quantity);
+        var totalPrice = document.getElementById("price_before_pdv").innerHTML;
+        totalPrice = (totalPrice-product_value);
+        $('#price_before_pdv').text(totalPrice);
+        var pdv = document.getElementById("price_before_pdv").innerHTML;
+        pdv = totalPrice*0.25;
+        $('#price_pdv').text(pdv);
+        var totalprice_pdv = totalPrice + pdv +40; 
+        $('#price_after_pdv').text(totalprice_pdv);
+        $('#totalcartprice').val(totalprice_pdv);
+
+       $(this).parent().remove();
+       $("#cartCount").text(totalItemCount);
+        $.ajax({
+        url: '/ajax/removeFromCart/' + product_rowid,
+        type: 'get',
+        data: {},
+        success: function(data) {
+      if (data.success == true) {
+        $('#item-destroyed').show();   
+        $('#item-destroyed').delay(1500).fadeOut();     
+      } else {
+        alert('Cannot find info');
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+
+
+       });
+
+        //this is else
+       
+      } else {
+        alert('Cannot find info');
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+
+
+
+function addItemToCart(id, btn_number, packaging, rowid){
+  console.log(rowid);
+  $.ajax({
+    url: '/ajax/addToCart/' + id,
+    type: 'get',
+    data: {quantity: document.getElementById("total_items"+btn_number).value,
+      packaging: packaging,
+      rowid: rowid,
+      update:'true'},
+    success: function(data) {
+      if (data.success == true) {
+        console.log(data.total_count);
+       
+        $('#item-added').show();   
+        $('#item-added').delay(1500).fadeOut();     
+      } else {
+        alert('Cannot find info');
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+      
+
+            @include('frontend.includes.footer')
+
+

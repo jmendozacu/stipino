@@ -1,0 +1,179 @@
+ 
+    
+      <?php echo $__env->make('frontend.includes.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+       <section id="blog-header" style="background-image: url('images/blog/entry-placeholder-1920x400.png');">
+        <div class="blog-title">
+            <h1><?php echo $entry->title; ?></h1>
+        </div>
+    </section>
+    <section id="blog-content">
+        <div class="container bg-grain">
+            <div class="row">
+                <div class="col-md-12 blog-post-bg">
+            
+                    <p><?php echo $entry->content; ?></p>
+
+                    <?php echo HTML::image(URL::to('/') . '/uploads/frontend/blog/' . $entry->image, $entry->title); ?>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="share-social">
+        <div class="row">
+            <div class="container">
+                <div class="col-md-2 col-xs-12">
+                    <h4>DIJELI ŠERAJ SADRŽAJ!</h4>
+                </div>
+                <div class="col-md-10 col-xs-12">
+                    <div class="blog-social-wrapper">
+                        <a href="#" class="blog-facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+                        <a href="#" class="blog-googleplus-share"><i class="fa fa-google-plus" aria-hidden="true"></i> Google+</a>
+                        <a href="#" class="blog-twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                        <a href="#" class="blog-email-share"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="fb-social-comments">
+        <div class="row">
+            <div class="container">
+                <div class="fb-comments" data-href="http://www.stipino.com" data-width="100%" data-numposts="5"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+ 
+
+ <div class="alert alert-success item-added-success displaynone" id="item-added">
+  <strong>Uspješno!</strong> Dodan novi proizvod u košaricu.
+</div>
+
+
+<div class="alert alert-warning item-added-success displaynone" id="item-destroyed">
+  <strong>Izbrisano!</strong> Obrisali ste proizvod iz košarice.
+</div>     
+
+<script type="text/javascript">
+                $(document).ready(function(){
+                $.ajax({
+                url: '/ajax/getCartItems/',
+                type: 'get',
+                data: {},
+                success: function(data) {
+                if (data.success == true) {
+                $("#cartCount").text(data.total_count);
+                console.log('this was good');       
+                } else {
+                alert('Cannot find info');
+                }
+
+                },
+             error: function(jqXHR, textStatus, errorThrown) {}
+             });
+                });
+
+</script>
+
+
+
+<script type="text/javascript">
+
+
+$("#cart").click(function() {
+    
+    var NAME = document.getElementById("cart_list");
+    var currentClass = NAME.className;
+  
+    if (currentClass == "container displayblock") { 
+        NAME.className = "container displaynone";  
+    } else {
+        NAME.className = "container displayblock";
+
+  $.ajax({
+    url: '/ajax/getCartItemList/',
+    type: 'get',
+    data: {},
+    success: function(data) {
+      if (data.success == true) {
+        var itemCount = Object.keys(data.cartitems).length;
+        var totalPrice = 0;
+        var totalItemCount = document.getElementById("cartCount").innerHTML;
+
+      
+
+        $("#cart-item-list").html("");
+        $("#total-price").html("");
+        for(i=0; i < itemCount; i++ ){
+    
+            totalPrice = data.cartitems[i].subtotal + totalPrice;
+          
+
+         
+          $('#cart-item-list').append('<li><div class="row cart-item-border"><div class="col-md-3 col-sm-3 col-xs-3" style="padding-left: 0;"><div class="cart-list-img"></div></div><div class="col-md-9 col-sm-9 col-xs-9"><a href="/proizvod/'+data.cartitems[i]['options'].permalink+'"><h3>'+data.cartitems[i].name+'</h3></a><div class="cart-item-options"><p>Količina: '+data.cartitems[i].qty+'</p><p style="margin-bottom: -20px;">Cijena: '+data.cartitems[i].price+'kn</p></div></div></div>'+'<input type="submit" class="done delete cart-delete-item" value="Obriši" data-id="'+data.cartitems[i].id+'" data-totalvalue="'+data.cartitems[i].subtotal+'" data-quantity="'+data.cartitems[i].qty+'"'+' data-rowid="'+data.cartitems[i].rowid+'">'+'</li>');
+
+
+        }
+
+        $('#total-price').append('<b>Ukupno:</b> '+totalPrice+'kn')
+        
+      
+       $('#cart-item-list').on('click', '.delete',function(){
+        var product_id = $(this).data('id');
+        var product_value = $(this).data('totalvalue');
+        var product_quantity = $(this).data('quantity');
+        var product_rowid = $(this).data('rowid');
+       
+     
+        totalItemCount = (totalItemCount-product_quantity);
+        totalPrice = (totalPrice-product_value);
+      
+
+       $(this).parent().remove();
+       $("#total-price").html("");
+       $('#total-price').append('<b>Ukupno:</b> '+totalPrice+'kn')
+       $("#cartCount").text(totalItemCount);
+        $.ajax({
+        url: '/ajax/removeFromCart/' + product_rowid,
+        type: 'get',
+        data: {},
+    success: function(data) {
+      if (data.success == true) {
+        $('#item-destroyed').show();   
+        $('#item-destroyed').delay(1500).fadeOut();     
+      } else {
+        alert('Cannot find info');
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+
+
+       });
+
+        
+       
+      } else {
+        alert('Cannot find info');
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {}
+  });
+
+    }
+
+    });
+
+</script>
+
+
+
+
+
+ <?php echo $__env->make('frontend.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ 

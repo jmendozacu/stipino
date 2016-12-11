@@ -1,0 +1,205 @@
+            <?php echo $__env->make('frontend.includes.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+        <!-- Start main-content -->
+        <div style="background-color: #545552; background-repeat: no-repeat; width: 100%; height: 125px;
+                    background-size: cover;">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="cart-header-title cart-header-divider">
+                           <p>Košarica</p>
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="col-md-8 cart-form-text-by-icon">
+                        <h2 class="cart-header-login-text cart-header-text-align">Imate li već korisnički račun napravljen kod nas? <a href="#" class="cart-header-login-text-green">Prijavite se</a></h2>
+                        <h2 class="cart-header-login-text">Nemate a zelite ga napraviti i iskoristiti sve pogodnosti?  <a href="#" class="cart-header-login-text-green">Registrirajte se!</a></h2>
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+     
+        <!--container2-->
+        
+        
+          
+            <div class="container cart-container-margin-top">
+            <div class="row">
+            <div class="col-md-6">
+                            <div class="cart-form-column-bg">
+                            <h1 class="cart-creditcard"> <i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Adresa na naplatu</h1>
+                           <div class="row cart-form-center ">
+                                <div class="col-md-12 ">
+                             <?php echo Form::text('first_name', '', ['class' => 'form-control radionice-form-control textinput-400','id' => 'title', 'placeholder' => 'Ime']); ?>
+
+                                </div>
+                            </div>
+                            <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                             <?php echo Form::text('last_name', '', ['class' => 'form-control radionice-form-control textinput-400', 'style' => 'margin-bottom: 35px' ,'id' => 'title', 'placeholder' => 'Prezime']); ?>
+
+                                </div>
+                            </div>
+                            <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                             <?php echo Form::text('address', '', ['class' => 'form-control radionice-form-control textinput-400', 'id' => 'title', 'placeholder' => 'Ulica i broj']); ?>
+
+                                </div>
+                            </div>
+                            <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                             <?php echo Form::text('area', '', ['class' => 'form-control radionice-form-control textinput-400', 'id' => 'title', 'placeholder' => 'Poštanski broj']); ?>
+
+                                </div>
+                            </div>
+                             <div class="row cart-form-center">
+                                <div class="col-md-12 ">
+                             <?php echo Form::text('city', '', ['class' => 'form-control radionice-form-control textinput-400', 'id' => 'id', 'placeholder' => 'Mjesto']); ?>
+
+                                </div>
+                            </div>
+                   <div class="row">
+                   <div class="col-md-2"><i class="fa fa-circle-o cart-form-delivery-icon" aria-hidden="true"></i></div>
+                   <div class="col-md-10 cart-form-text-by-icon"> <h4 class="cart-form-delivery">Dostava na drugu adresu</h4>
+                   <p class="cart-form-delivery-info">Želite li dostavu na drugu adresu, ili poslati kao poklon, odaberite ovu opciju i unesite adresu za dostavu.</p></div>
+                   </div>
+                  </div>
+                  <div>
+                      <h1 class="cart-truck"> <i class="fa fa-truck" aria-hidden="true"></i>&nbsp;&nbsp;Dostava</h1>
+                     
+                 <div class="row cart-content1-border">
+                   <div class="col-md-2"><i class="fa fa-check-circle-o cart-form-content1-icon" aria-hidden="true"></i></div>
+                   <div class="col-md-10 cart-form-text-by-icon"> <h4 class="cart-form-content1">Stipina dostava</h4>
+                   <p class="cart-form-content1-info">Naše proizvode dostavljamo <span class="cart-form-content1-info-green"> u sve veće hrvatske gradove</span>.
+                   Slijedeća dostava u <span class="text-bold">Zagreb, tržnica Kvatric.</span></p>
+                  <h3 class="cart-content1-date-text"><span class="cart-content1-date-number">28.</span>studenog <span class="cart-content1-date-number">2016.</span></h3></div>
+
+                   </div>
+
+                     <div class="row cart-content2-border">
+                   <div class="col-md-2"><i class="fa fa-circle-o cart-form-content2-icon" aria-hidden="true"></i></div>
+                   <div class="col-md-10 cart-form-text-by-icon"> <h4 class="cart-form-content1">Kurirska služba</h4>
+                   <p class="cart-form-content1-info">Naše pakete dostavlja <span class="cart-form-content1-info-green"> XYZ Express</span>, po cijeni od 8kn po kilogramu, na podrucju cijele Hrvatske.
+                  </p>
+                  </div>
+
+                   </div>
+                
+                  </div>
+                   
+               </div>
+
+               <div class="col-md-6 cart-row-margin-top">
+                   <div class="row">
+                                  <div class="col-md-5">
+                                            <div style="background-image:url('img/frontend/products/ajvar_blagi_big.jpg'); width: 100%; height:150px;" ></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <h1 class="cart-content-title">Pekmez od marelice</h1>
+                                    <span class="cart-content-amount-green">Pakiranje</span> <span class="cart-content-amount-number">250 ml</span>
+                                        <div class="display-inline-flex" style="margin-top:7px;">
+                                            <div class="button-numeric">-</div>
+                                            <input type="text" name="fname" class="form-control numeric-form-control" style="width: 100px;"><br>
+                                            <div class="button-numeric">+</div>
+                                            </div>
+                                            <a class="cart-remove-proizvod-text-green">Ukloni proizvod</a>
+                                    </div>
+                                    <div class="col-md-1 cart-form-text-by-icon">
+                                          <div class="cart-price-circle-green">
+                                          <p class="cart-iznos-price-green">iznos</p>
+                                        <p class="cart-current-price-green">79.96 kn</p>
+                                    </div>
+                                    </div>    
+                            </div>
+                            <div class="row cart-proizvod-row-margin">
+                                  <div class="col-md-5">
+                                            <div style="background-image:url('img/frontend/products/ajvar_blagi_big.jpg'); width: 100%; height:150px;" ></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <h1 class="cart-content-title">Pekmez od marelice</h1>
+                                    <span class="cart-content-amount-green">Pakiranje</span> <span class="cart-content-amount-number">250 ml</span>
+                                        <div class="display-inline-flex" style="margin-top:7px;">
+                                            <div class="button-numeric">-</div>
+                                            <input type="text" name="fname" class="form-control numeric-form-control" style="width: 100px;"><br>
+                                            <div class="button-numeric">+</div>
+                                            </div>
+                                            <a class="cart-remove-proizvod-text-green">Ukloni proizvod</a>
+                                    </div>
+                                    <div class="col-md-1 cart-form-text-by-icon">
+                                          <div class="cart-price-circle-green">
+                                          <p class="cart-iznos-price-green">iznos</p>
+                                        <p class="cart-current-price-green">79.96 kn</p>
+                                    </div>
+                                    </div>    
+                            </div>
+                            <div class="row cart-proizvod-row-margin">
+                                  <div class="col-md-5">
+                                            <div style="background-image:url('img/frontend/products/ajvar_blagi_big.jpg'); width: 100%; height:150px;" ></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <h1 class="cart-content-title">Pekmez od marelice</h1>
+                                    <span class="cart-content-amount-green">Pakiranje</span> <span class="cart-content-amount-number">250 ml</span>
+                                        <div class="display-inline-flex" style="margin-top:7px;">
+                                            <div class="button-numeric">-</div>
+                                            <input type="text" name="fname" class="form-control numeric-form-control" style="width: 100px;"><br>
+                                            <div class="button-numeric">+</div>
+                                            </div>
+                                            <a class="cart-remove-proizvod-text-green">Ukloni proizvod</a>
+                                    </div>
+                                    <div class="col-md-1 cart-form-text-by-icon">
+                                          <div class="cart-price-circle-green">
+                                          <p class="cart-iznos-price-green">iznos</p>
+                                        <p class="cart-current-price-green">79.96 kn</p>
+                                    </div>
+                                    </div>    
+                            </div>
+                            <div class="row cart-proizvod-row-margin">
+                                  <div class="col-md-5">
+                                            <div style="background-image:url('img/frontend/products/ajvar_blagi_big.jpg'); width: 100%; height:150px;" ></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <h1 class="cart-content-title">Pekmez od marelice</h1>
+                                    <span class="cart-content-amount-green">Pakiranje</span> <span class="cart-content-amount-number">250 ml</span>
+                                        <div class="display-inline-flex" style="margin-top:7px;">
+                                            <div class="button-numeric">-</div>
+                                            <input type="text" name="fname" class="form-control numeric-form-control" style="width: 100px;"><br>
+                                            <div class="button-numeric">+</div>
+                                            </div>
+                                            <a class="cart-remove-proizvod-text-green">Ukloni proizvod</a>
+                                    </div>
+                                    <div class="col-md-1 cart-form-text-by-icon">
+                                          <div class="cart-price-circle-green">
+                                          <p class="cart-iznos-price-green">iznos</p>
+                                        <p class="cart-current-price-green">79.96 kn</p>
+                                    </div>
+                                    </div>    
+                            </div>
+                            <div class="row cart-price-background">
+                            <div class="col-md-6">
+                              <h3 class="cart-price-text-bold">Iznos</h3>
+                              <h3 class="cart-price-text">Dostava</h3>
+                              <h3 class="cart-price-text">Porez (PDV)</h3>
+                              <h3 class="cart-price-text-big">Ukupno</h3>
+                            </div>
+                            <div class="col-md-6">
+                              <h3 class="cart-price-text-bold">160.45 kn</h3>
+                              <h3 class="cart-price-text">40.00 kn</h3>
+                              <h3 class="cart-price-text">40.11 kn</h3>
+                              <h3 class="cart-price-text-big">200.56 kn</h3>
+                            </div> 
+                            <a href="#" class="btn cart-order-button">Naruči</a> 
+                            </div>
+                     </div>
+              </div>
+
+  
+          </div>
+      
+ 
+      
+
+
+            <?php echo $__env->make('frontend.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

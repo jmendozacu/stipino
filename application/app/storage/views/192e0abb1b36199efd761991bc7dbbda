@@ -1,0 +1,536 @@
+ 
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=768019090006558";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="wrapper">
+      <?php echo $__env->make('frontend.includes.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <!-- Start main-content -->
+        <div class="main-content">
+            <!-- Section: home -->
+            <section id="home">
+                <div class="container-fluid p-0">
+                    <!-- Slider Revolution Start -->
+                    <div class="rev_slider_wrapper">
+                        <div class="rev_slider" data-version="5.0">
+                            <ul>
+                                <!-- SLIDE 1 -->
+                                <li data-index="rs-1" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-1-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';">Iz vinskog podruma kuće stiže
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-1-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">Harmonija okusa
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-1-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['130']" data-fontsize="['24']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">Kako biste istaknuli okuse Vaših kulinarskih specijaliteta, <br> sljubite ih raznovrsnim slavonskim i baranjskim vinima.</p>
+                                        <p class="unhide-xs">Kako biste istaknuli okuse Vaših kulinarskih specijaliteta,
+                                            <br> sljubite ih raznovrsnim slavonskim i baranjskim vinima.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 2 -->
+                                <li data-index="rs-2" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner2.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner2.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-2-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';">U SRCU <span class="text-theme-colored">BARANJE</span>
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-2-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">BARANJE
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-2-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['160']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">Na samom ulazu u Čeminac do imanja vodi 300 m duga zemljana cesta, što osigurava potpunu privatnost i mir.
+                                            <br>Raskošna kuća za odmor smještena je na brdašcu s kojeg pogled seže na privatno jezero i voćnjak.</p>
+                                        <p class="unhide-xs">Na samom ulazu u Čeminac do imanja vodi 300 m duga zemljana cesta,
+                                            <br> što osigurava potpunu privatnost i mir. Raskošna kuća za odmor smještena
+                                            <br> je na brdašcu s kojeg pogled seže na privatno jezero i voćnjak.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 3 -->
+                                <li data-index="rs-3" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner1.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner1.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-3-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';">Predivna kuća
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-3-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">Za raskošan odmor
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-3-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['140']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">Prostrana peterosobna kuća sa dva kamina, lovačkom sobom te vanjskom terasom i očaravajućim pogledom na imanje.</p>
+                                        <p class="unhide-xs">Prostrana peterosobna kuća sa dva kamina,
+                                            <br>lovačkom sobom te vanjskom terasom i očaravajućim pogledom na imanje.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 4 -->
+                                <li data-index="rs-4" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner4.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner4.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-4-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';">Opuštena zabava
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-4-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">Sa društvom uz roštilj
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-4-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['140']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">Drvena nadstrešnica za 40 osoba, smještena je između topola koje osiguravaju trajni hlad i povjetarac, čak i u najtopljim danima kroz godinu.</p>
+                                        <p class="unhide-xs">Drvena nadstrešnica za 40 osoba, smještena je između topola koje
+                                            <br> osiguravaju trajni hlad i povjetarac, čak i u najtopljim danima kroz godinu.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 5 -->
+                                <li data-index="rs-5" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner5.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner5.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-5-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';">Rodna zemlja
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-5-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">U skladu sa prirodom
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-5-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['140']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">Zelena oaza mira i tišine koja se proteže na 12 hektara u srcu Baranje, najbolji je način da se povežete sa korijenima i prirodom.</p>
+                                        <p class="unhide-xs">Zelena oaza mira i tišine koja se proteže na 12 hektara u srcu Baranje,
+                                            <br>najbolji je način da se povežete sa korijenima i prirodom.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 6 -->
+                                <li data-index="rs-6" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner6.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner6.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-6-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';">Boje mirisa i okusa
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-6-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">U našem voćnjaku
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-6-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['140']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">Plodno zemljište i umjerena klima pogodni su za uzgoj voća vrhunske kvalitete. Tako na imanju možete okusiti jabuke, marelice,
+                                            <br>višnje, trešnje, breskve,jagode, maline, kupine, nektarine, šljive i kruške.</p>
+                                        <p class="unhide-xs">Plodno zemljište i umjerena klima pogodni su za uzgoj voća
+                                            <br>vrhunske kvalitete. Tako na imanju možete okusiti jabuke, marelice, višnje,
+                                            <br>trešnje, breskve,jagode, maline, kupine, nektarine, šljive i kruške.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 7 -->
+                                <li data-index="rs-7" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner7.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner7.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-7-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';"> Vinski podrum
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-7-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">Skriva blago ispod zemlje
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-7-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['140']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">U vinskom podrumu kuće možete uživati u raznovrsnim kvalitetnim slavonskim i baranjskim vinima koja predstavljaju više desetljeća staru tradiciju.</p>
+                                        <p class="unhide-xs">U vinskom podrumu kuće možete uživati u raznovrsnim kvalitetnim
+                                            <br>slavonskim i baranjskim vinima koja predstavljaju više desetljeća staru tradiciju.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 8 -->
+                                <li data-index="rs-8" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner8.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner8.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-8-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';"> Vodena oaza
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-8-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">U srcu imanja
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-8-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['140']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p class="hide-xs">Između nadstrešnice za druženje i kuće za odmor, nalazi se veliko jezero (70x20 metara i dubine 3m) u kojem
+                                            <br>se možete kupati za vrijeme toplijih dana ili samo odmarati pecajući.</p>
+                                        <p class="unhide-xs">Između nadstrešnice za druženje i kuće za odmor, nalazi se
+                                            <br>veliko jezero (70x20 metara i dubine 3m) u kojem se možete kupati
+                                            <br>za vrijeme toplijih dana ili samo odmarati pecajući.</p>
+                                    </div>
+                                </li>
+                                <!-- SLIDE 9 -->
+                                <li data-index="rs-9" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="img/frontend/banner9.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="img/frontend/banner9.jpg" alt="" data-bgposition="center 40%" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-resizeme text-white font-roboto bg-dark-transparent-2 font-weight-100 pr-20 pl-20" id="rs-9-layer-1" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['-120']" data-fontsize="['36']" data-lineheight="['64']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 36px; font-family:'Open Sans';"> Riznica
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption tp-resizeme font-roboto text-white font-weight-100 bg-green-transparent pr-40 pl-40" id="rs-9-layer-2" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['0']" data-fontsize="['72']" data-lineheight="['120']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5;  font-size: 72px; font-family:'Fredericka the Great'; ">Tradicije
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption tp-resizeme font-raleway bg-dark-transparent-5 font-weight-100 pr-20 pl-20 text-white" id="rs-9-layer-3" data-x="['left']" data-hoffset="['30']" data-y="['middle']" data-voffset="['140']" data-fontsize="['20']" data-lineheight="['36']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;s:500" data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1400" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; font-family: 'Open Sans';  padding-top: 12px; padding-bottom: 12px; min-height: 100px!important;">
+                                        <p>Tradicija i običaji korijen su svakog naroda. Stvarajte ih i prenosite sa nama!</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end .rev_slider -->
+                    </div>
+                    <!-- end .rev_slider_wrapper -->
+                    <script>
+                    $(document).ready(function(e) {
+                        var revapi = $(".rev_slider").revolution({
+                            sliderType: "standard",
+                            jsFileLocation: "js/frontend/revolution-slider/js/",
+                            sliderLayout: "auto",
+                            dottedOverlay: "none",
+                            delay: 500000,
+                            navigation: {
+                                keyboardNavigation: "off",
+                                keyboard_direction: "horizontal",
+                                mouseScrollNavigation: "off",
+                                onHoverStop: "off",
+                                touch: {
+                                    touchenabled: "on",
+                                    swipe_threshold: 75,
+                                    swipe_min_touches: 1,
+                                    swipe_direction: "horizontal",
+                                    drag_block_vertical: false
+                                },
+                                arrows: {
+                                    style: "gyges",
+                                    enable: true,
+                                    hide_onmobile: false,
+                                    hide_onleave: true,
+                                    hide_delay: 200,
+                                    hide_delay_mobile: 1200,
+                                    tmp: '',
+                                    left: {
+                                        h_align: "left",
+                                        v_align: "center",
+                                        h_offset: 0,
+                                        v_offset: 0
+                                    },
+                                    right: {
+                                        h_align: "right",
+                                        v_align: "center",
+                                        h_offset: 0,
+                                        v_offset: 0
+                                    }
+                                },
+                                bullets: {
+                                    enable: true,
+                                    hide_onmobile: true,
+                                    hide_under: 800,
+                                    style: "hebe",
+                                    hide_onleave: false,
+                                    direction: "horizontal",
+                                    h_align: "center",
+                                    v_align: "bottom",
+                                    h_offset: 20,
+                                    v_offset: 30,
+                                    space: 20,
+                                    tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title"></span>'
+                                }
+                            },
+                            responsiveLevels: [1240, 1024, 778],
+                            visibilityLevels: [1240, 1024, 778],
+                            gridwidth: [1170, 1024, 778, 480],
+                            gridheight: [680, 768, 960, 720],
+                            lazyType: "none",
+                            parallax: "mouse",
+                            parallaxBgFreeze: "off",
+                            parallaxLevels: [2, 3, 4, 5, 6, 7, 8, 9, 10, 1],
+                            shadow: 0,
+                            spinner: "off",
+                            stopLoop: "on",
+                            stopAfterLoops: 0,
+                            stopAtSlide: -1,
+                            shuffle: "off",
+                            autoHeight: "off",
+                            fullScreenAutoWidth: "off",
+                            fullScreenAlignForce: "off",
+                            fullScreenOffsetContainer: "",
+                            fullScreenOffset: "0",
+                            hideThumbsOnMobile: "off",
+                            hideSliderAtLimit: 0,
+                            hideCaptionAtLimit: 0,
+                            hideAllCaptionAtLilmit: 0,
+                            debugMode: false,
+                            fallbacks: {
+                                simplifyAll: "off",
+                                nextSlideOnWindowFocus: "off",
+                                disableFocusListener: false,
+                            }
+                        });
+                    });
+                    </script>
+                    <!-- Slider Revolution Ends -->
+                </div>
+            </section>
+            <section class="bg-grain">
+            <div class="container radionice-container3-margin-bot">
+            <div class="row radionice-activity-row-margin">
+             <?php foreach($latestworkshops['entries'] as $latestworkshop): ?>
+                <div class="col-md-4 radionice-activity-text-align">
+                    <div class="radionice-first-activity" style="background-image:url('<?php echo URL::asset('uploads/frontend/workshops/thumbs/' . $latestworkshop->image . ''); ?>">
+                    <div><p class="homepage-first-under-slider-radionice"><?php echo $latestworkshop->title; ?></p>
+                        <p class="homepage-under-slider-radionice"><?php echo $latestworkshop->intro; ?></p></div>
+                        
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </section>
+            <section class="bg-black naslovna-slider-tanki">
+                <div class="container">
+                    <div class="row">
+                        <div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <div class="bg-black bg-black-padding">
+                                            <div class="col-md-4 col-sm-4 col-xs-12 desni-rub center-xs">
+                                                <p class="obavjest">Lorem ipsum Dolor sit</p>
+                                                <p class="datum"><i class="fa fa-clock-o" aria-hidden="true"></i> 14. rujna</p>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <div class="caption">
+                                                    <p class="kratki-opis">Maecenas tristique gravida, odio et sagi ttis justo. Suspendisse ultricies vean onec dictum non nulla ut lobortis tellus. Tristique gravida!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <div class="bg-black bg-black-padding">
+                                            <div class="col-md-4 col-sm-4 col-xs-12 desni-rub center-xs">
+                                                <p class="obavjest">Koga nema, ima 2</p>
+                                                <p class="datum"><i class="fa fa-clock-o" aria-hidden="true"></i> 14. rujna</p>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <div class="caption">
+                                                    <p class="kratki-opis">Maecenas tristique gravida, odio et sagi ttis justo. Suspendisse ultricies vean onec dictum non nulla ut lobortis tellus. Tristique gravida!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic">
+                                <span class="slider-arrow-left">
+                            </span>
+                            </a>
+                            <a class="right carousel-control" data-slide="next" href="#carousel-example-generic">
+                                <span class="slider-arrow-right pull-right">
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ponuda">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6" style="padding-left: 0px; padding-right: 0px;">
+                            <div id="featured_products" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                <?php foreach($featuredproducts['entries'] as $featuredproduct): ?>
+                                    <?php if($featuredproduct == reset($featuredproducts['entries'])): ?>
+                                    <div class="featured-product item active"  style="background-image:url('<?php echo URL::asset('uploads/frontend/products/thumbs/' . $featuredproduct->image . ''); ?>">
+                                    <?php else: ?>
+                                    <div class="featured-product item"  style="background-image:url('<?php echo URL::asset('uploads/frontend/products/thumbs/' . $featuredproduct->image . ''); ?>">
+                                    <?php endif; ?>
+                                        <h3 class="featured-product-overlay text-center font-fredrick-white"><?php echo $featuredproduct->title; ?></h3>
+                                        <?php if($featuredproduct->onsale  == '1'): ?>
+                                    <div class="proizvodi-price-circle">
+                                        <p class="proizvodi-real-price"><?php echo $featuredproduct->sale_price; ?> kn</p>
+                                        <p class="proizvodi-current-price"><?php echo $featuredproduct->price; ?> kn</p>
+                                    </div>
+                                        <?php else: ?>
+                                     <div class="proizvodi-price-circle-green">
+                                        <p class="proizvodi-current-price-green"><?php echo $featuredproduct->price; ?> kn</p>
+                                    </div>
+                                        <?php endif; ?>
+                                        <div class="featured-product-lower-text">
+                                            <p><?php echo $featuredproduct->description; ?></p>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                                </div>
+                                <a class="featured-product-lower-arrow left carousel-control" href="#featured_products" role="button" data-slide="prev">
+                                    <span class="arrow-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="featured-product-lower-arrow right carousel-control" href="#featured_products" role="button" data-slide="next">
+                                    <span class="arrow-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 najam-smjestaja">
+                            <div class="najam-smjestaja-overlay">
+                                <h3 class="text-center font-fredrick-white borders">Najam smještaja</h3>
+                                <p>Čitanje knjige i ljuljuškanje u čamcu, šetnja prirodom ili roštilj sa društvom, proslava rođendana ili vjenćanje - samo su neke od mogućih aktivnosti.</p>
+                                <button type="button" class="btn btn-default">Pogledaj ponudu</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 radionice">
+                            <div class="radionice-overlay">
+                                <h3 class="text-center font-fredrick-white">Radionice</h3>
+                                <div class="divider"></div>
+                                <p>Lorem ipsum dolor sit amet i odaberite neku od radionica:</p>
+                                <div class="row radionice-container">
+                                    <div class="col-xs-4 col-sm-4 col-md-4">
+                                        <a href="#"> <img src="img/frontend/radionice-jabuke.png"></a>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4">
+                                        <a href="#"> <img src="img/frontend/radionice-paradajz.png"></a>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4">
+                                        <a href="#"> <img src="img/frontend/radionice-paprika.png"></a>
+                                    </div>
+                                </div>
+                                <p><a class="radionice-link" href="<?php echo URL::route('workshop'); ?>">Pogledaj sve radionice</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6  naslovna-blog">
+                            <div class="ponuda-blog-wrapper">
+                                <h3 class="text-center"><a href="<?php echo URL::route('blogPost', $latestblogposts['entries']['0']->permalink); ?>"><?php echo $latestblogposts['entries']['0']->title; ?> </a></h3>
+                                <p class="naslovna-sat"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date('d.m.Y', strtotime($latestblogposts['entries']['0']->created_at)); ?> </p>
+                                <p class="paradajz-crvena-blog"><a href="<?php echo URL::route('blogPost', $latestblogposts['entries']['1']->permalink); ?>"><?php echo $latestblogposts['entries']['1']->title; ?> </a>
+                                </p>
+                                <hr class="naslovna-blog-hr">
+                                <p class="naslovna-sat"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date('d.m.Y', strtotime($latestblogposts['entries']['1']->created_at)); ?> </p>
+                                <p class="paradajz-crvena-blog"><a href="<?php echo URL::route('blogPost', $latestblogposts['entries']['2']->permalink); ?>"><?php echo $latestblogposts['entries']['2']->title; ?></a>
+                                </p>
+                                <hr class="naslovna-blog-hr">
+                                <p class="naslovna-sat"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date('d.m.Y', strtotime($latestblogposts['entries']['2']->created_at)); ?></p>
+                                <div class="blog-wrapper-slika hide-xs">
+                                    <a href="<?php echo URL::route('frontBlog'); ?>" class="btn button-blog">Procitaj blog</a>
+                                </div>
+                                <a href="<?php echo URL::route('frontBlog'); ?>" class="btn button-blog-solo unhide-xs">Procitaj blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="benefits">
+                <div class="row benefits-color">
+                    <div class="container">
+                        <div class="col-md-4 padding-benefits-slike center-xs">
+                            <div class="col-md-4">
+                                <img src="img/frontend/benefits-tree.png">
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Sadnja i uzgoj</h6>
+                                <p>At vero eos et accusamus et iusto odio bland</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 padding-benefits-slike center-xs">
+                            <div class="col-md-4">
+                                <img src="img/frontend/benefits-pestleandmortar.png">
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Kontrola i prerada</h6>
+                                <p>At vero eos et accusamus et iusto odio bland</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 padding-benefits-slike center-xs">
+                            <div class="col-md-4">
+                                <img src="img/frontend/benefits-truck.png">
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Dostava na vrata</h6>
+                                <p>At vero eos et accusamus et iusto odio bland</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+            <section id="how-to">
+                <div class="row how-to-color">
+                    <div class="container">
+                        <div class="col-md-6">
+                            <h3><i class="fa fa-shopping-basket" aria-hidden="true"></i> Kako kupovati?</h3>
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panel-heading-pading">
+                                        <h4 class="panel-title naslovna-naslov-harmonika">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                            1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dodate proizvode u košaricu</a>
+                          </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse in">
+                                        <div class="panel-body naslovna-pozadina-harmonika">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panel-heading-pading">
+                                        <h4 class="panel-title naslovna-naslov-harmonika">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Odaberete mjesto i vrijeme dostave</a>
+                              </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <div class="panel-body naslovna-pozadina-harmonika">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panel-heading-pading">
+                                        <h4 class="panel-title naslovna-naslov-harmonika">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Platite pouzećem</a>
+                              </h4>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse">
+                                        <div class="panel-body naslovna-pozadina-harmonika">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 about">
+                            <img src="img/frontend/stipe-o-nama.jpg">
+                            <h4>O nama</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="fb-social">
+                <div class="row">
+                    <div class="container">
+                        <div class="col-md-6 hidden-xs hidden-sm">
+                            <div class="fb-page" data-href="https://www.facebook.com/stipinooo/" data-width="420" data-height="180" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/stipinooo/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/stipinooo/">Stipino.com - Volim Jabuke</a></blockquote>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pull-about">
+                            <p>Iako je odrastao u obitelji pravnika, sa planom da nastavi tradiciju, Stipe je odlucio napustiti obiteljski posao i iskoristiti jedino što je imao u životu - racunalo i komad zemlje.</p>
+                            <a href="o-nama" class="btn button-about">Više o nama</a>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+             <?php echo $__env->make('frontend.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+             </div>
+             </div>

@@ -1,0 +1,3 @@
+[11-Dec-2016 05:39:42 Europe/Zagreb] PHP Fatal error:  Can't use function return value in write context in /home2/culexvr/public_html/application/app/controllers/core/FrontendController.php on line 814
+[11-Dec-2016 05:40:19 Europe/Zagreb] PHP Fatal error:  Can't use function return value in write context in /home2/culexvr/public_html/application/app/controllers/core/FrontendController.php on line 814
+[11-Dec-2016 05:41:17 Europe/Zagreb] PHP Fatal error:  Can't use function return value in write context in /home2/culexvr/public_html/application/app/controllers/core/FrontendController.php on line 814
